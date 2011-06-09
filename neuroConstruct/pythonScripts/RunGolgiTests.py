@@ -49,7 +49,7 @@ plotSims =              True
 plotVoltageOnly =       True
 runInBackground =       True
 analyseSims =           True
-verbose =               False
+verbose =               True
 
 #############################################
 
