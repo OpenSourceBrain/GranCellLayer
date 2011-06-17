@@ -85,6 +85,7 @@ def testAll(argv=None):
                                suggestedRemoteRunTime =   suggestedRemoteRunTime)
 
     simManager.reloadSims(plotVoltageOnly =   plotVoltageOnly,
+                          plotSims =          plotSims,
                           analyseSims =       analyseSims)
 
     # These were discovered using analyseSims = True above.
