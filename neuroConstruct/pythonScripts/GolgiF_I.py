@@ -38,8 +38,8 @@ preStimDel = 0
 preStimDur = 200
 
 stimAmpLow =  0.003
-stimAmpInc =  0.0025
-stimAmpHigh = 0.08
+stimAmpInc =  0.003
+stimAmpHigh = 0.03
 
 stimDel = preStimDur
 stimDur = 1500
@@ -52,7 +52,7 @@ analyseThreshold = -20 # mV
 
 
 mpiConfig =            MpiSettings.LOCAL_SERIAL    # Default setting: run on one local processor
-#mpiConfig =            MpiSettings.MATLEM_1PROC    # Run on one processor on UCL cluster
+mpiConfig =            MpiSettings.MATLEM_1PROC    # Run on one processor on UCL cluster
 
 numConcurrentSims = 4
 if mpiConfig != MpiSettings.LOCAL_SERIAL: numConcurrentSims = 30
@@ -67,7 +67,7 @@ projFile = File("../GranCellLayer.ncx")
 
 simManager = nc.SimulationManager(projFile,
                                   numConcurrentSims)
-
+'''
 simManager.generateFICurve("NEURON",
                            simConfig,
                            stimAmpLow,
@@ -92,7 +92,7 @@ preStimDur = 200
 
 stimAmpLow = -0.02
 stimAmpInc = 0.002
-stimAmpHigh = 0.03
+stimAmpHigh = 0.05
 
 stimDel = preStimDur
 stimDur = 3000
@@ -115,5 +115,5 @@ simManager.generateFICurve("NEURON",
                  analyseStopTime,
                  analyseThreshold,
                  mpiConfig =                mpiConfig,
-                 suggestedRemoteRunTime =   suggestedRemoteRunTime)'''
+                 suggestedRemoteRunTime =   suggestedRemoteRunTime)
                 
