@@ -69,22 +69,22 @@ analyseSims =           True
 plotSims =              True
 plotVoltageOnly =       True
 
-simAllPrefix =          "D_h_c_"   # Adds a prefix to simulation reference
+simAllPrefix =          "C_d_s_"   # Adds a prefix to simulation reference
 
 targetNum = 5000
 
-runInBackground =       False
+runInBackground =       True
 
 verbose =               True
 runSims =               True
 #runSims =               False
 
 saveAsHdf5 =            True
-#saveAsHdf5 =            False
+saveAsHdf5 =            False
 
 saveSpikes =        True
-saveSpikes =        False
-
+'''saveSpikes =        False
+'''
 from ucl.physiol.neuroconstruct.neuron import NeuronFileManager
 runMode = NeuronFileManager.RUN_HOC
 #runMode = NeuronFileManager.RUN_PYTHON_XML
@@ -114,9 +114,10 @@ def testAll(argv=None):
 
     totDens = densityGrC + densityMF + densityGoC
 
-    numGrC = int(targetNum * densityGrC/totDens)
     numMF = int(targetNum * densityMF/totDens)
     numGoC = int(targetNum * densityGoC/totDens)
+
+    numGrC=targetNum-numMF-numGoC
 
     vol = targetNum/(totDens*1e-9)
     height = 150

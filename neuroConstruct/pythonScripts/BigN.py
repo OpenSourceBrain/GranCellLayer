@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #
 #
 #   File to generate network for execution on parallel NEURON
@@ -38,8 +39,8 @@ projFile = File("../GranCellLayer.ncx")
 ###########  Main settings  ###########
 simDuration =           100 # ms
 simDt =                 0.025 # ms
-neuroConstructSeed =    1234
-simulatorSeed =         1111
+neuroConstructSeed =    98781234
+simulatorSeed =         9718111
 simulators =            ["NEURON"]
 simConfigs = []
 simConfigs.append("TestScaling")
@@ -83,25 +84,27 @@ confs[144] = pre+str(144)
 '''
 ##############################
 '''
-confs[8] = MpiSettings.MATLEM_8PROC
-confs[16] = MpiSettings.MATLEM_16PROC
-confs[32] = MpiSettings.MATLEM_32PROC
 confs[48] = MpiSettings.MATLEM_48PROC
 
 '''
 
+confs[8] = MpiSettings.MATLEM_8PROC
+confs[16] = MpiSettings.MATLEM_16PROC
+confs[32] = MpiSettings.MATLEM_32PROC
+confs[48] = MpiSettings.MATLEM_48PROC
 confs[64] = MpiSettings.MATLEM_64PROC
 confs[96] = MpiSettings.MATLEM_96PROC
-#confs[128] = MpiSettings.MATLEM_128PROC
-#confs[160] = MpiSettings.MATLEM_160PROC
-#confs[200] = MpiSettings.MATLEM_200PROC
+confs[128] = MpiSettings.MATLEM_128PROC
+confs[160] = MpiSettings.MATLEM_160PROC
+confs[200] = MpiSettings.MATLEM_200PROC
+
 
 wait = False
 
 multipleRuns =          [-1, -2, -3, -4]
 multipleRuns =          [-1]
 
-suggestedRemoteRunTime = 120   # mins
+suggestedRemoteRunTime = 1020   # mins
 
 varTimestepNeuron =     False
 
@@ -159,7 +162,7 @@ def testAll(argv=None):
         perProc = 5000
         targetNum = perProc*numb
 
-        simAllPrefix =          "NS_%i_on_L%i_"%(perProc, numb)   # Adds a prefix to simulation reference
+        simAllPrefix =          "NZ_%i_%i_"%(perProc, numb)   # Adds a prefix to simulation reference
 
         print "Simulation pref: "+simAllPrefix
 
@@ -207,7 +210,7 @@ def testAll(argv=None):
         if wait:
             while (len(simManager.allRunningSims)>0):
                 print "Waiting for the following sims to finish: "+str(simManager.allRunningSims)
-                time.sleep(15) # wait a while...
+                time.sleep(30) # wait a while...
                 simManager.updateSimsRunning()
 
             times = []
