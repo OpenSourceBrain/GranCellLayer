@@ -48,6 +48,8 @@ numSpikes =             3
 verbose = True
 plotSims = False
 runInBackground = True
+runSims = False
+#runSims = True
 
 #############################################
 
@@ -58,8 +60,6 @@ project = pm.loadProject(projFile)
 
 allFinishedSims = []
 
-runSims = False
-#runSims = True
 
 allSpikeTimeDataSets = {}
 
@@ -104,6 +104,11 @@ for simConfigName in simConfigs:
             try:
                 simData = SimulationData(simDir)
                 simData.initialise()
+                if not simData.isDataLoaded():
+                    print "Waiting while data loads"
+                    time.sleep(5)
+
+
                 times = simData.getAllTimes()
 
 
