@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.6.0_20" class="java.beans.XMLDecoder">
+<java version="1.6.0_24" class="java.beans.XMLDecoder">
 
 <!-- This is a neuroConstruct project file. It's best to open this
 file with neuroConstruct, as opposed to editing it directly. 
@@ -19,7 +19,7 @@ The 3DNetworkModel Sim Config has 75 granule cells with 3D placement and random 
 Note that the plots associated with these simulations slow the simulation down and, especially with NEURON, it&apos;s better to run the simualtions in &apos;No GUI mode&apos; after checking that they run correctly.</string>
   </void>
   <void property="projectFileVersion">
-   <string>neuroConstruct v1.5.1</string>
+   <string>neuroConstruct v1.6.1</string>
   </void>
   <void property="projectName">
    <string>GranCellLayer</string>
@@ -512,7 +512,7 @@ Note that the plots associated with these simulations slow the simulation down a
      <string>Golgi_98_3D</string>
     </void>
     <void method="add">
-     <string>Granule_98_3D</string>
+     <string>Granule_98</string>
     </void>
     <void method="add">
      <string>Golgi_98_fixedInitPot</string>
@@ -1822,7 +1822,7 @@ Note that the plots associated with these simulations slow the simulation down a
    <float>700.0</float>
   </void>
   <void property="reference">
-   <string>Sim_623</string>
+   <string>Sim_625</string>
   </void>
   <void property="saveCopyGenSimFiles">
    <boolean>true</boolean>
@@ -2048,13 +2048,13 @@ Note that the plots associated with these simulations slow the simulation down a
     <object class="ucl.physiol.neuroconstruct.project.SimConfig">
      <void property="cellGroups">
       <void method="add">
-       <string>Mossies</string>
-      </void>
-      <void method="add">
        <string>Golgis</string>
       </void>
       <void method="add">
        <string>Grans</string>
+      </void>
+      <void method="add">
+       <string>Mossies</string>
       </void>
      </void>
      <void property="description">
@@ -2084,13 +2084,13 @@ Note that the plots associated with these simulations slow the simulation down a
        <string>Golgis_v</string>
       </void>
       <void method="add">
+       <string>Mossies_v</string>
+      </void>
+      <void method="add">
        <string>Plot_0</string>
       </void>
       <void method="add">
        <string>Var_0</string>
-      </void>
-      <void method="add">
-       <string>Mossies_v</string>
       </void>
      </void>
      <void property="simDuration">
@@ -2135,19 +2135,19 @@ Note that the plots associated with these simulations slow the simulation down a
      </void>
      <void property="plots">
       <void method="add">
-       <string>MF_3D_Small_v</string>
-      </void>
-      <void method="add">
        <string>GoC_3D_Small_v</string>
       </void>
       <void method="add">
-       <string>Var_2</string>
+       <string>GrC_3D_Small_v</string>
+      </void>
+      <void method="add">
+       <string>MF_3D_Small_v</string>
       </void>
       <void method="add">
        <string>Var_1</string>
       </void>
       <void method="add">
-       <string>GrC_3D_Small_v</string>
+       <string>Var_2</string>
       </void>
      </void>
      <void property="simDuration">
@@ -2159,10 +2159,10 @@ Note that the plots associated with these simulations slow the simulation down a
     <object class="ucl.physiol.neuroconstruct.project.SimConfig">
      <void property="cellGroups">
       <void method="add">
-       <string>GrC_3D</string>
+       <string>GoC_3D</string>
       </void>
       <void method="add">
-       <string>GoC_3D</string>
+       <string>GrC_3D</string>
       </void>
       <void method="add">
        <string>MF_3D</string>
@@ -2192,19 +2192,19 @@ Note that the plots associated with these simulations slow the simulation down a
      </void>
      <void property="plots">
       <void method="add">
+       <string>GoC_3D_v</string>
+      </void>
+      <void method="add">
        <string>GrC_3D_v</string>
       </void>
       <void method="add">
        <string>MF_3D_v</string>
       </void>
       <void method="add">
-       <string>Var_5</string>
-      </void>
-      <void method="add">
        <string>Var_4</string>
       </void>
       <void method="add">
-       <string>GoC_3D_v</string>
+       <string>Var_5</string>
       </void>
      </void>
      <void property="simDuration">
@@ -2268,10 +2268,10 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
        <string>SingleGolgi_v</string>
       </void>
       <void method="add">
-       <string>Var_7</string>
+       <string>Var_6</string>
       </void>
       <void method="add">
-       <string>Var_6</string>
+       <string>Var_7</string>
       </void>
      </void>
      <void property="simDuration">
@@ -2283,10 +2283,10 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     <object class="ucl.physiol.neuroconstruct.project.SimConfig">
      <void property="cellGroups">
       <void method="add">
-       <string>TestScalingGrC</string>
+       <string>TestScalingGoC</string>
       </void>
       <void method="add">
-       <string>TestScalingGoC</string>
+       <string>TestScalingGrC</string>
       </void>
       <void method="add">
        <string>TestScalingMF</string>
@@ -2319,10 +2319,10 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
        <string>TestScalingGoC_v</string>
       </void>
       <void method="add">
-       <string>TestScalingMF_v</string>
+       <string>TestScalingGrC_v</string>
       </void>
       <void method="add">
-       <string>TestScalingGrC_v</string>
+       <string>TestScalingMF_v</string>
       </void>
      </void>
      <void property="simDuration">
@@ -2342,10 +2342,10 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </void>
      <void property="inputs">
       <void method="add">
-       <string>Input_7</string>
+       <string>Input_6</string>
       </void>
       <void method="add">
-       <string>Input_6</string>
+       <string>Input_7</string>
       </void>
      </void>
      <void property="name">

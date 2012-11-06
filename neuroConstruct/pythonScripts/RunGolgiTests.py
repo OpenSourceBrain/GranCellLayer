@@ -39,6 +39,7 @@ simConfigs = []
 simConfigs.append("Single Golgi Cell")
 
 simDt =                 0.001
+simDtOverride =         {"LEMS":0.00025}
 
 simulators =            ["NEURON", "GENESIS_PHYS", "GENESIS_SI"] # Note: nernst object isn't implemented in MOOSE yet
 
@@ -66,6 +67,7 @@ def testAll(argv=None):
 
     simManager.runMultipleSims(simConfigs =           simConfigs,
                                simDt =                simDt,
+                               simDtOverride =        simDtOverride,
                                simulators =           simulators,
                                runInBackground =      runInBackground,
                                varTimestepNeuron =    varTimestepNeuron,
@@ -81,7 +83,7 @@ def testAll(argv=None):
                                            508.0, 529.3, 564.5, 613.8, 668.3, 724.1, 780.2,
                                            836.6, 893.0, 949.5, 1157.6, 1277.6, 1394.4]}
 
-    spikeTimeAccuracy = 1  # Note run time of 1500 ms...
+    spikeTimeAccuracy = 0.25  # Note run time of 1500 ms...
 
     report = simManager.checkSims(spikeTimesToCheck = spikeTimesToCheck,
                                   spikeTimeAccuracy = spikeTimeAccuracy)

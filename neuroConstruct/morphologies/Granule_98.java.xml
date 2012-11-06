@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.6.0_20" class="java.beans.XMLDecoder">
+<java version="1.6.0_24" class="java.beans.XMLDecoder">
 
 <!-- Note that this XML is specific to the neuroConstruct Java cell object model and not any part of the NeuroML framework -->
 
@@ -77,21 +77,6 @@
    <void method="put">
     <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
      <void property="density">
-      <float>3.30033E-10</float>
-     </void>
-     <void property="name">
-      <string>GranPassiveCond</string>
-     </void>
-    </object>
-    <object class="java.util.Vector">
-     <void method="add">
-      <string>all</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
-     <void property="density">
       <float>1.79811E-7</float>
      </void>
      <void property="name">
@@ -107,10 +92,37 @@
    <void method="put">
     <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
      <void property="density">
-      <float>1.14567E-8</float>
+      <float>5.57227E-7</float>
      </void>
      <void property="name">
-      <string>Gran_KA_98</string>
+      <string>Gran_NaF_98</string>
+     </void>
+    </object>
+    <object class="java.util.Vector">
+     <void method="add">
+      <string>all</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
+     <void property="density">
+      <float>3.30033E-10</float>
+     </void>
+     <void property="name">
+      <string>GranPassiveCond</string>
+     </void>
+    </object>
+    <object class="java.util.Vector">
+     <void method="add">
+      <string>all</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
+     <void property="name">
+      <string>Gran_CaPool_98</string>
      </void>
     </object>
     <object class="java.util.Vector">
@@ -137,10 +149,10 @@
    <void method="put">
     <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
      <void property="density">
-      <float>9.084216E-9</float>
+      <float>1.14567E-8</float>
      </void>
      <void property="name">
-      <string>Gran_CaHVA_98</string>
+      <string>Gran_KA_98</string>
      </void>
     </object>
     <object class="java.util.Vector">
@@ -152,22 +164,10 @@
    <void method="put">
     <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
      <void property="density">
-      <float>5.57227E-7</float>
+      <float>9.084216E-9</float>
      </void>
      <void property="name">
-      <string>Gran_NaF_98</string>
-     </void>
-    </object>
-    <object class="java.util.Vector">
-     <void method="add">
-      <string>all</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <object class="ucl.physiol.neuroconstruct.cell.ChannelMechanism">
-     <void property="name">
-      <string>Gran_CaPool_98</string>
+      <string>Gran_CaHVA_98</string>
      </void>
     </object>
     <object class="java.util.Vector">
