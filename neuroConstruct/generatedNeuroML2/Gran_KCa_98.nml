@@ -49,11 +49,11 @@
         <Constant name="CONC_SCALE" dimension="concentration" value="1 mM"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="ca_conc" dimension="none" value="caConc / CONC_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="(2500/(1 + ( (1.5e-3 *(exp (-85*V))) / ca_conc))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -63,11 +63,11 @@
         <Constant name="CONC_SCALE" dimension="concentration" value="1 mM"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="ca_conc" dimension="none" value="caConc / CONC_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="(1500/(1 + (ca_conc / (1.5e-4 * (exp (-77*V)))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 

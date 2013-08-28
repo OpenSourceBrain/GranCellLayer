@@ -52,10 +52,10 @@
         <Constant name="TIME_SCALE" dimension="time" value="1 s"/>
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="v / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="(170 * ((exp (73 *(V - (-0.038)))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -63,10 +63,10 @@
         <Constant name="TIME_SCALE" dimension="time" value="1 s"/>
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="v / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="(170 * ((exp ((-18) *(V - (-0.038)))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -74,10 +74,10 @@
         <Constant name="TIME_SCALE" dimension="time" value="1 s"/>
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="v / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="( 0.76 ) / TIME_SCALE" valueCondition="V  .gt. ( -0.046 )" valueIfFalse="( 0.7 + 0.065*(exp (-80*(V - (-0.046))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -85,10 +85,10 @@
         <Constant name="TIME_SCALE" dimension="time" value="1 s"/>
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="v / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="(1.1/(1 + (exp (-80.7 * (V - (-0.044)))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 

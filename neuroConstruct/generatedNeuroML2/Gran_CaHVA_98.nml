@@ -55,10 +55,10 @@
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="( 5.0 ) / TIME_SCALE" valueCondition="V   .lt. ( -0.060 )" valueIfFalse="( 5 * (exp (-50 * (V - (-0.060))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -67,10 +67,10 @@
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="r" exposure="r" dimension="per_time" value="( 0 ) / TIME_SCALE" valueCondition="V   .lt. ( -0.060 )" valueIfFalse="( 5 - (5 * (exp (-50 * (V - (-0.060)))))) / TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.github.com/NeuroML/NeuroML2/master/Schemas/NeuroML2/NeuroML_v2beta.xsd" id="Golgi_98_3D">
-
-    <include href="Golgi_KA_CML.nml"/>
-
-    <include href="Golgi_CaPool_CML.nml"/>
-
-    <include href="Golgi_NaF_CML.nml"/>
-
-    <include href="Golgi_KDr_CML.nml"/>
-
-    <include href="Golgi_KCa_CML.nml"/>
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta1.xsd" id="Golgi_98_3D">
 
     <include href="Golgi_CaHVA_CML.nml"/>
 
-    <include href="GolgiPassiveCond.nml"/>
+    <include href="Golgi_CaPool_CML.nml"/>
 
     <include href="Golgi_H_CML.nml"/>
+
+    <include href="Golgi_KA_CML.nml"/>
+
+    <include href="Golgi_KCa_CML.nml"/>
+
+    <include href="Golgi_KDr_CML.nml"/>
+
+    <include href="Golgi_NaF_CML.nml"/>
+
+    <include href="GolgiPassiveCond.nml"/>
 
     <cell id="Golgi_98_3D">
 
@@ -96,6 +96,12 @@ Maex, R and De Schutter, E. Synchronization of Golgi and Granule Cell Firing in 
 
                 <channelDensity condDensity="0.033 mS_per_cm2" id="GolgiPassiveCond_all" ionChannel="GolgiPassiveCond" ion="non_specific" erev="-55.0 mV"/>
 
+                <channelDensityNernst condDensity="0.831757 mS_per_cm2" id="Golgi_CaHVA_CML_soma_group" ionChannel="Golgi_CaHVA_CML" segmentGroup="soma_group" ion="ca">
+
+                    <!--Reversal potential will be calculated by Nernst equation from internal & external calcium-->
+
+
+                </channelDensityNernst>
 
                 <channelDensity condDensity="0.171496 mS_per_cm2" id="Golgi_H_CML_soma_group" ionChannel="Golgi_H_CML" segmentGroup="soma_group" ion="h" erev="-42.0 mV"/>
 
@@ -117,7 +123,7 @@ Maex, R and De Schutter, E. Synchronization of Golgi and Granule Cell Firing in 
 
             <intracellularProperties>
 
-                <species id="ca" ion="ca" concentrationModel="Golgi_CaPool_CML" initialConcentration="7.55E-11 mol_per_cm3" initialExtConcentration="2.4E-6 mol_per_cm3" segmentGroup="soma_group"/>
+                <species segmentGroup="soma_group" id="ca" ion="ca" concentrationModel="Golgi_CaPool_CML" initialConcentration="7.55E-11 mol_per_cm3" initialExtConcentration="2.4E-6 mol_per_cm3" segmentGroup="soma_group"/>
 
                 <resistivity value="0.1 kohm_cm"/>
 

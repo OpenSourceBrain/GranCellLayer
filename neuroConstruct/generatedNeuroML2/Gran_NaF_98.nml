@@ -34,7 +34,7 @@
             </rdf:RDF>
         </annotation>
 
-        <gate id="m" type="gateHHrates" instances="3">
+        <gate id="m" type="gateHHratesTau" instances="3">
             <q10Settings type="q10ExpTemp" q10Factor="3" experimentalTemp="17.350264793 degC"/>
             <notes>Note: offset from ChannelML file incorporated into midpoint of rates!!</notes>
             <forwardRate type="HHExpRate" rate="1500per_s" scale="0.012345679V" midpoint="-0.028999999999999998V"/>
@@ -42,7 +42,7 @@
             <timeCourse type="Gran_NaF_98_m_tau_tau"/>
         </gate>
 
-        <gate id="h" type="gateHHrates" instances="1">
+        <gate id="h" type="gateHHratesTau" instances="1">
             <q10Settings type="q10ExpTemp" q10Factor="3" experimentalTemp="17.350264793 degC"/>
             <notes>Note: offset from ChannelML file incorporated into midpoint of rates!!</notes>
             <forwardRate type="HHExpRate" rate="120per_s" scale="-0.01123596V" midpoint="-0.04V"/>
@@ -59,10 +59,10 @@
         <Requirement name="alpha" dimension="per_time"/>
         <Requirement name="beta" dimension="per_time"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="t" exposure="t" dimension="time" value="( 0.00005 ) * TIME_SCALE" valueCondition="1/(alpha + beta)  .lt. ( 0.00005 )" valueIfFalse="( 1/(alpha + beta)) * TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -73,10 +73,10 @@
         <Requirement name="alpha" dimension="per_time"/>
         <Requirement name="beta" dimension="per_time"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="t" exposure="t" dimension="time" value="( 0.000225 ) * TIME_SCALE" valueCondition="1/(alpha + beta)  .lt. ( 0.000225 )" valueIfFalse="( 1/(alpha + beta)) * TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 

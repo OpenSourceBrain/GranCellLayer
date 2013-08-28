@@ -34,14 +34,14 @@
             </rdf:RDF>
         </annotation>
 
-        <gate id="m" type="gateHHrates" instances="3">
+        <gate id="m" type="gateHHtauInf" instances="3">
             <q10Settings type="q10ExpTemp" q10Factor="1" experimentalTemp="17.350264793 degC"/>
             <notes>Note: offset from ChannelML file incorporated into midpoint of rates!!</notes>
             <timeCourse type="Gran_KA_98_m_tau_tau"/>
             <steadyState type="HHSigmoidVariable" rate="1" scale="0.0198V" midpoint="-0.036699999999999997V"/>
         </gate>
 
-        <gate id="h" type="gateHHrates" instances="1">
+        <gate id="h" type="gateHHtauInf" instances="1">
             <q10Settings type="q10ExpTemp" q10Factor="1" experimentalTemp="17.350264793 degC"/>
             <notes>Note: offset from ChannelML file incorporated into midpoint of rates!!</notes>
             <timeCourse type="Gran_KA_98_h_tau_tau"/>
@@ -55,10 +55,10 @@
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="t" exposure="t" dimension="time" value="(0.410e-3 * ((exp (( ((V) + 0.0435) / (-0.0428))))) + 0.167e-3) * TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 
@@ -67,10 +67,10 @@
         <Constant name="VOLT_SCALE" dimension="voltage" value="1 V"/>
         <Constant name="offset" dimension="voltage" value="0.010V"/>
 
-        <Behavior>
+        <Dynamics>
             <DerivedVariable name="V" dimension="none" value="(v - offset) / VOLT_SCALE"/>
             <DerivedVariable name="t" exposure="t" dimension="time" value="(0.001 * (10.8 + (30 * V) + (1 / (57.9 * (exp (V * 127)) + (134e-6 * (exp (V * (-59)))))))) * TIME_SCALE"/>
-        </Behavior>
+        </Dynamics>
 
     </ComponentType>
 

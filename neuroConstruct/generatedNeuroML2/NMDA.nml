@@ -3,7 +3,7 @@
 
     <notes>ChannelML file describing a synaptic mechanism</notes>
 
-    <nmdaSynapse id="NMDA" gbase="1.873087796e-10S" tauRise="1e-3s" tauDecay="13.3333e-3s" erev="0V">
+    <blockingPlasticSynapse id="NMDA" gbase="1.873087796e-10S" tauRise="1e-3s" tauDecay="13.3333e-3s" erev="0V">
 
         <notes>Example of an NMDA receptor synaptic mechanism, based on Maex DeSchutter 1998, Gabbiani et al, 1994</notes>
                 
@@ -40,8 +40,8 @@
             </rdf:RDF>
         </annotation>
 
-        <voltageConcDepBlock species="mg" blockConcentration="1.2mM" scalingConc="1.9205441817997078mM" scalingVolt="0.016129032258064516V"/>
+        <blockMechanism type="voltageConcDepBlockMechanism" species="mg" blockConcentration="1.2mM" scalingConc="1.9205441817997078mM" scalingVolt="0.016129032258064516V"/>
 
-    </nmdaSynapse>
+    </blockingPlasticSynapse>
 
 </neuroml>
