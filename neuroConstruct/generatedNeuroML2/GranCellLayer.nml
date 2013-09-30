@@ -308,7 +308,7 @@ Network connection: NetConn_Grans_Golgis contains 300 individual synaptic connec
 
 
 
-        <population id="Input_0_population" component="Input_0_population" size="12"/>    <projection id="NetConn_Golgis_Grans" presynapticPopulation="Golgis" postsynapticPopulation="Grans" synapse="GABAA">
+        <population id="Input_0_population" component="Input_0" size="12"/>    <projection id="NetConn_Golgis_Grans" presynapticPopulation="Golgis" postsynapticPopulation="Grans" synapse="GABAA">
             <connection id="0" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/0/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="1" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/1/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="2" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/2/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
