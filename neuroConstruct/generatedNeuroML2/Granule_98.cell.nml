@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta1.xsd" id="Granule_98">
 
-    <include href="Gran_CaHVA_98.nml"/>
+    <include href="Gran_CaHVA_98.channel.nml"/>
 
-    <include href="Gran_CaPool_98.nml"/>
+    <include href="Gran_CaPool_98.channel.nml"/>
 
-    <include href="Gran_H_98.nml"/>
+    <include href="Gran_H_98.channel.nml"/>
 
-    <include href="Gran_KA_98.nml"/>
+    <include href="Gran_KA_98.channel.nml"/>
 
-    <include href="Gran_KCa_98.nml"/>
+    <include href="Gran_KCa_98.channel.nml"/>
 
-    <include href="Gran_KDr_98.nml"/>
+    <include href="Gran_KDr_98.channel.nml"/>
 
-    <include href="Gran_NaF_98.nml"/>
+    <include href="Gran_NaF_98.channel.nml"/>
 
-    <include href="GranPassiveCond.nml"/>
+    <include href="GranPassiveCond.channel.nml"/>
 
     <cell id="Granule_98">
 
@@ -49,8 +49,6 @@
 
             <membraneProperties>
 
-                <channelDensity condDensity="0.0330033 mS_per_cm2" id="GranPassiveCond_all" ionChannel="GranPassiveCond" ion="non_specific" erev="-65.0 mV"/>
-
                 <channelDensity condDensity="0.9084216 mS_per_cm2" id="Gran_CaHVA_98_all" ionChannel="Gran_CaHVA_98" ion="ca" erev="80.0 mV"/>
 
                 <channelDensity condDensity="0.03090506 mS_per_cm2" id="Gran_H_98_all" ionChannel="Gran_H_98" ion="h" erev="-42.0 mV"/>
@@ -62,6 +60,8 @@
                 <channelDensity condDensity="8.89691 mS_per_cm2" id="Gran_KDr_98_all" ionChannel="Gran_KDr_98" ion="k" erev="-90.0 mV"/>
 
                 <channelDensity condDensity="55.7227 mS_per_cm2" id="Gran_NaF_98_all" ionChannel="Gran_NaF_98" ion="na" erev="55.0 mV"/>
+
+                <channelDensity condDensity="0.0330033 mS_per_cm2" id="GranPassiveCond_all" ionChannel="GranPassiveCond" ion="non_specific" erev="-65.0 mV"/>
 
                 <spikeThresh value="0 mV"/>
 
