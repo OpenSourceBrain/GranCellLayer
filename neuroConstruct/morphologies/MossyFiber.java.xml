@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.6.0_24" class="java.beans.XMLDecoder">
+<java version="1.7.0_55" class="java.beans.XMLDecoder">
 
 <!-- Note that this XML is specific to the neuroConstruct Java cell object model and not any part of the NeuroML framework -->
 
@@ -93,7 +93,7 @@
   </void>
   <void property="synapsesVsGroups">
    <void method="put">
-    <string>MF_AMPA</string>
+    <string>NMDA</string>
     <object class="java.util.Vector">
      <void method="add">
       <string>all</string>
@@ -101,7 +101,7 @@
     </object>
    </void>
    <void method="put">
-    <string>NMDA</string>
+    <string>MF_AMPA</string>
     <object class="java.util.Vector">
      <void method="add">
       <string>all</string>
