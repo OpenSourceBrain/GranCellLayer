@@ -17,7 +17,7 @@
 
     <include href="GolgiPassiveCond.channel.nml"/>
 
-    <cell id="Golgi_98" neuroLexId="sao1415726815">
+    <cell id="Golgi_98">
 
         <notes>An implementation using ChannelML of the Golgi cell model from:
 
