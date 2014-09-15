@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta3.xsd" id="Golgi_98">
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta3.xsd" id="Golgi_98">
 
     <include href="Golgi_CaHVA_CML.channel.nml"/>
 
@@ -31,9 +31,9 @@ Maex, R and De Schutter, E. Synchronization of Golgi and Granule Cell Firing in 
             </segment>
 
             <segmentGroup id="Soma" neuroLexId="sao864921383">    <!--
-This group contains an unbranched set of segments, and all of the segmentGroups marked with
-neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
-These segmentGroups correspond to the 'cables' of NeuroML v1.8.1-->
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
 
                 <member segment="0"/>
             </segmentGroup>
@@ -55,24 +55,23 @@ These segmentGroups correspond to the 'cables' of NeuroML v1.8.1-->
         <biophysicalProperties id="biophys">
 
             <membraneProperties>
-
+                
                 <channelDensity condDensity="0.171496 mS_per_cm2" id="Golgi_H_CML_all" ionChannel="Golgi_H_CML" ion="h" erev="-42.0 mV"/>
-
+                
                 <channelDensity condDensity="0.524928 mS_per_cm2" id="Golgi_KA_CML_all" ionChannel="Golgi_KA_CML" ion="k" erev="-90.0 mV"/>
-
+                
                 <channelDensity condDensity="0.571654 mS_per_cm2" id="Golgi_KCa_CML_all" ionChannel="Golgi_KCa_CML" ion="k" erev="-90.0 mV"/>
-
+                
                 <channelDensity condDensity="6.78839 mS_per_cm2" id="Golgi_KDr_CML_all" ionChannel="Golgi_KDr_CML" ion="k" erev="-90.0 mV"/>
-
+                
                 <channelDensity condDensity="40.0158 mS_per_cm2" id="Golgi_NaF_CML_all" ionChannel="Golgi_NaF_CML" ion="na" erev="55.0 mV"/>
-
+                
                 <channelDensity condDensity="0.033 mS_per_cm2" id="GolgiPassiveCond_all" ionChannel="GolgiPassiveCond" ion="non_specific" erev="-55.0 mV"/>
+                
 
-                    <!--Reversal potential for ca in Golgi_CaHVA_CML will be calculated by Nernst equation from internal & external calcium-->
-
+                <!--Reversal potential for ca in Golgi_CaHVA_CML will be calculated by Nernst equation from internal & external calcium-->
 
                 <channelDensityNernst condDensity="0.831757 mS_per_cm2" id="Golgi_CaHVA_CML_all" ionChannel="Golgi_CaHVA_CML" ion="ca"/>
-
                 
 
                 <spikeThresh value="0 mV"/>
