@@ -342,7 +342,9 @@ Network connection: NetConn_Grans_Golgis contains 300 individual synaptic connec
 
 
 
-        <population id="Input_0_population" component="Input_0" size="12"/>    <projection id="NetConn_Golgis_Grans" presynapticPopulation="Golgis" postsynapticPopulation="Grans" synapse="GABAA">
+        <population id="Input_0_population" component="Input_0" size="12"/>    
+
+<projection id="NetConn_Golgis_Grans" presynapticPopulation="Golgis" postsynapticPopulation="Grans" synapse="GABAA">
             <connection id="0" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/0/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="1" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/1/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="2" preCellId="../Golgis/0/Golgi_98" postCellId="../Grans/2/Granule_98" preSegmentId="0" preFractionAlong="0.0" postSegmentId="0" postFractionAlong="0.5"/>
@@ -724,31 +726,9 @@ Network connection: NetConn_Grans_Golgis contains 300 individual synaptic connec
             <connection id="299" preCellId="../Mossies/7/MossyFiber" postCellId="../Grans/74/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5"/>
         </projection>
 
-        <projection id="Input_0_projection">
-    <connection id="0"/>
-    
-    <connection id="1"/>
-    
-    <connection id="2"/>
-    
-    <connection id="3"/>
-    
-    <connection id="4"/>
-    
-    <connection id="5"/>
-    
-    <connection id="6"/>
-    
-    <connection id="7"/>
-    
-    <connection id="8"/>
-    
-    <connection id="9"/>
-    
-    <connection id="10"/>
-    
-    <connection id="11"/>
-    </projection>    <projection id="NetConn_Grans_Golgis" presynapticPopulation="Grans" postsynapticPopulation="Golgis" synapse="AMPA_GranGol">
+
+
+<projection id="NetConn_Grans_Golgis" presynapticPopulation="Grans" postsynapticPopulation="Golgis" synapse="AMPA_GranGol">
             <connection id="0" preCellId="../Grans/0/Granule_98" postCellId="../Golgis/3/Golgi_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="1" preCellId="../Grans/0/Granule_98" postCellId="../Golgis/1/Golgi_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5"/>
             <connection id="2" preCellId="../Grans/0/Granule_98" postCellId="../Golgis/0/Golgi_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5"/>
