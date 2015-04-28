@@ -1,6 +1,8 @@
 
 /neuroConstruct/generatedNeuroML2/runsim.sh
 /neuroConstruct/generatedNeuroML2/*.nml~
+savedNetworks
+
 *.pyc
 *i686
 *x86_64
