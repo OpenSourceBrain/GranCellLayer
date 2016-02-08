@@ -1,6 +1,11 @@
 
 /neuroConstruct/generatedNeuroML2/runsim.sh
 /neuroConstruct/generatedNeuroML2/*.nml~
+/neuroConstruct/generatedNeuroML2/*.dat
+/neuroConstruct/generatedNeuroML2/*.hoc
+/neuroConstruct/generatedNeuroML2/*.mod
+
+/neuroConstruct/generatedNeuroML2/*nrn.py
 savedNetworks
 
 *.pyc
