@@ -21,3 +21,4 @@ simulations
 Net_5*.h5
 Net_5*.nml
 *.*~
+/neuroConstruct/generatedNeuroML2/simulator.props

@@ -1,0 +1,123 @@
+<Lems xmlns="http://www.neuroml.org/lems/0.7.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/lems/0.7.2  https://raw.githubusercontent.com/LEMS/LEMS/development/Schemas/LEMS/LEMS_v0.7.2.xsd">
+
+    <Target component="sim1" reportFile="simulator.props" timesFile="time.dat"/>
+
+        <!--Include standard NeuroML 2 ComponentType definitions-->
+
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    
+
+        <!--Include the generated NeuroML 2 files-->
+
+
+        <!--   Channel/synapse files-->
+    <Include file="Gran_CaHVA_98.channel.nml"/>
+    <Include file="Gran_CaPool_98.nml"/>
+    <Include file="Gran_H_98.channel.nml"/>
+    <Include file="Gran_KA_98.channel.nml"/>
+    <Include file="Gran_KCa_98.channel.nml"/>
+    <Include file="Gran_KDr_98.channel.nml"/>
+    <Include file="Gran_NaF_98.channel.nml"/>
+    <Include file="GranPassiveCond.channel.nml"/>
+    <Include file="MF_AMPA.synapse.nml"/>
+    <Include file="MFFastLeakCond.channel.nml"/>
+    <Include file="NMDA.synapse.nml"/>
+        <!--   Cell files-->
+    <Include file="Granule_98.cell.nml"/>
+    <Include file="MossyFiber.cell.nml"/>
+        <!--   Network file-->
+    <Include file="TestNet.net.nml"/>
+    
+
+        <!--Note: this could be: Simulation id="sim1" ... , but Component type="Simulation" ... 
+        is used to allow validation of this file according to the LEMS schema specified above...-->
+    <Component type="Simulation" id="sim1" length="200.0ms" step="0.01ms" target="network_GranCellLayer">
+        
+        <Display id="Mossies_v" title="GranCellLayer: TestSingleGranNet, Mossies, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE" xmin="-0.020000001" xmax="0.22000001" ymin="-0.104" ymax="0.064" timeScale="1s">
+            <Line id="Mossies_0 v" timeScale="1s" quantity="Mossies/0/MossyFiber/v" scale="1 V" color="#000000"/>
+        
+            <Line id="Mossies_1 v" timeScale="1s" quantity="Mossies/1/MossyFiber/v" scale="1 V" color="#ff0000"/>
+        
+            <Line id="Mossies_2 v" timeScale="1s" quantity="Mossies/2/MossyFiber/v" scale="1 V" color="#0000ff"/>
+        
+            <Line id="Mossies_3 v" timeScale="1s" quantity="Mossies/3/MossyFiber/v" scale="1 V" color="#009b00"/>
+        
+            <Line id="Mossies_4 v" timeScale="1s" quantity="Mossies/4/MossyFiber/v" scale="1 V" color="#ffc800"/>
+        
+            <Line id="Mossies_5 v" timeScale="1s" quantity="Mossies/5/MossyFiber/v" scale="1 V" color="#8c6400"/>
+        
+            <Line id="Mossies_6 v" timeScale="1s" quantity="Mossies/6/MossyFiber/v" scale="1 V" color="#ff00ff"/>
+        
+            <Line id="Mossies_7 v" timeScale="1s" quantity="Mossies/7/MossyFiber/v" scale="1 V" color="#ffff00"/>
+        
+            <Line id="Mossies_8 v" timeScale="1s" quantity="Mossies/8/MossyFiber/v" scale="1 V" color="#808080"/>
+        
+            <Line id="Mossies_9 v" timeScale="1s" quantity="Mossies/9/MossyFiber/v" scale="1 V" color="#000000"/>
+        
+            <Line id="Mossies_10 v" timeScale="1s" quantity="Mossies/10/MossyFiber/v" scale="1 V" color="#ff0000"/>
+        
+            <Line id="Mossies_11 v" timeScale="1s" quantity="Mossies/11/MossyFiber/v" scale="1 V" color="#0000ff"/>
+        </Display>
+    
+        <Display id="SingleGranule_v" title="GranCellLayer: TestSingleGranNet, SingleGranule, VOLTAGE" xmin="-0.020000001" xmax="0.22000001" ymin="-0.104" ymax="0.064" timeScale="1s">
+            <Line id="SingleGranule_0 v" timeScale="1s" quantity="SingleGranule/0/Granule_98/v" scale="1 V" color="#000000"/>
+        </Display>
+    
+        <OutputFile id="Mossies_v_1_0_0_OF" fileName="Mossies_0.0.dat">
+            <OutputColumn id="v" quantity="Mossies/0/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_1_0_OF" fileName="Mossies_1.0.dat">
+            <OutputColumn id="v" quantity="Mossies/1/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_2_0_OF" fileName="Mossies_2.0.dat">
+            <OutputColumn id="v" quantity="Mossies/2/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_3_0_OF" fileName="Mossies_3.0.dat">
+            <OutputColumn id="v" quantity="Mossies/3/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_4_0_OF" fileName="Mossies_4.0.dat">
+            <OutputColumn id="v" quantity="Mossies/4/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_5_0_OF" fileName="Mossies_5.0.dat">
+            <OutputColumn id="v" quantity="Mossies/5/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_6_0_OF" fileName="Mossies_6.0.dat">
+            <OutputColumn id="v" quantity="Mossies/6/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_7_0_OF" fileName="Mossies_7.0.dat">
+            <OutputColumn id="v" quantity="Mossies/7/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_8_0_OF" fileName="Mossies_8.0.dat">
+            <OutputColumn id="v" quantity="Mossies/8/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_9_0_OF" fileName="Mossies_9.0.dat">
+            <OutputColumn id="v" quantity="Mossies/9/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_10_0_OF" fileName="Mossies_10.0.dat">
+            <OutputColumn id="v" quantity="Mossies/10/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_11_0_OF" fileName="Mossies_11.0.dat">
+            <OutputColumn id="v" quantity="Mossies/11/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="SingleGranule_v_0_0_OF" fileName="SingleGranule_0.0.dat">
+            <OutputColumn id="v" quantity="SingleGranule/0/Granule_98/v"/>
+        </OutputFile>
+    </Component>
+
+
+</Lems>

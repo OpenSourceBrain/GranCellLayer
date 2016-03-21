@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="network_GranCellLayer">
+
+    <notes>
+
+Network structure (NeuroML 2beta4) for project: GranCellLayer saved with neuroConstruct v1.7.1 on: 15:01:12, 21-Mar-16
+
+Cell Group: SingleGranule contains 1 cells
+Cell Group: Mossies contains 12 cells
+
+Network connection: NetConn_Mossies_SingleGranule contains 12 individual synaptic connections
+
+
+    </notes>
+
+
+    <include href="Gran_CaHVA_98.channel.nml"/>
+    <include href="Gran_CaPool_98.nml"/>
+    <include href="Gran_H_98.channel.nml"/>
+    <include href="Gran_KA_98.channel.nml"/>
+    <include href="Gran_KCa_98.channel.nml"/>
+    <include href="Gran_KDr_98.channel.nml"/>
+    <include href="Gran_NaF_98.channel.nml"/>
+    <include href="GranPassiveCond.channel.nml"/>
+    <include href="Granule_98.cell.nml"/>
+    <include href="MF_AMPA.synapse.nml"/>
+    <include href="MFFastLeakCond.channel.nml"/>
+    <include href="MossyFiber.cell.nml"/>
+    <include href="NMDA.synapse.nml"/>
+    <pulseGenerator id="Input_11" delay="0.03s" duration="0.001s" amplitude="1.0E-8A"/>
+    
+    <pulseGenerator id="Input_9" delay="0.02s" duration="0.001s" amplitude="1.0E-8A"/>
+    
+    <pulseGenerator id="Input_10" delay="0.025s" duration="0.001s" amplitude="1.0E-8A"/>
+    
+    <network id="network_GranCellLayer" type="networkWithTemperature" temperature="32.0 degC">
+
+        
+
+        <population id="SingleGranule" component="Granule_98" type="populationList" size="1">
+           <annotation>
+                <property tag="color" value="0.35546875 0.515625 0.6015625"/>
+            </annotation>
+            <instance id="0">
+                <location x="0.0" y="0.0" z="0.0"/>
+            </instance>
+        </population>
+
+        <population id="Mossies" component="MossyFiber" type="populationList" size="12">
+           <annotation>
+                <property tag="color" value="0.19921875 0.59765625 0.99609375"/>
+            </annotation>
+            <instance id="0">
+                <location x="0.0" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="1">
+                <location x="81.818184" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="2">
+                <location x="163.63637" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="3">
+                <location x="245.45456" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="4">
+                <location x="327.27274" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="5">
+                <location x="409.0909" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="6">
+                <location x="490.90912" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="7">
+                <location x="572.7273" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="8">
+                <location x="654.5455" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="9">
+                <location x="736.36365" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="10">
+                <location x="818.1818" y="0.0" z="0.0"/>
+            </instance>
+            <instance id="11">
+                <location x="900.0" y="0.0" z="0.0"/>
+            </instance>
+        </population>
+
+
+
+        <projection synapse="MF_AMPA" id="NetConn_Mossies_SingleGranule__MF_AMPA" presynapticPopulation="Mossies" postsynapticPopulation="SingleGranule">
+            <connectionWD id="0" preCellId="../Mossies/5/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.3766775"/>
+            <connectionWD id="1" preCellId="../Mossies/10/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.3249736"/>
+            <connectionWD id="2" preCellId="../Mossies/8/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.148984"/>
+            <connectionWD id="3" preCellId="../Mossies/3/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="5.6865816"/>
+            <connectionWD id="4" preCellId="../Mossies/1/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="5.5996943"/>
+            <connectionWD id="5" preCellId="../Mossies/2/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.0789695"/>
+            <connectionWD id="6" preCellId="../Mossies/11/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="5.567392"/>
+            <connectionWD id="7" preCellId="../Mossies/9/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.193911"/>
+            <connectionWD id="8" preCellId="../Mossies/6/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.0187864"/>
+            <connectionWD id="9" preCellId="../Mossies/4/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="5.774625"/>
+            <connectionWD id="10" preCellId="../Mossies/7/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="5.8287845"/>
+            <connectionWD id="11" preCellId="../Mossies/0/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="6.442181"/>
+        </projection>
+
+        <projection synapse="NMDA" id="NetConn_Mossies_SingleGranule__NMDA" presynapticPopulation="Mossies" postsynapticPopulation="SingleGranule">
+            <connectionWD id="0" preCellId="../Mossies/5/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.4595142"/>
+            <connectionWD id="1" preCellId="../Mossies/10/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.7258855"/>
+            <connectionWD id="2" preCellId="../Mossies/8/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.5002678"/>
+            <connectionWD id="3" preCellId="../Mossies/3/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.94555396"/>
+            <connectionWD id="4" preCellId="../Mossies/1/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.14850634"/>
+            <connectionWD id="5" preCellId="../Mossies/2/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.36823893"/>
+            <connectionWD id="6" preCellId="../Mossies/11/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.26161277"/>
+            <connectionWD id="7" preCellId="../Mossies/9/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.008028328"/>
+            <connectionWD id="8" preCellId="../Mossies/6/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.49595493"/>
+            <connectionWD id="9" preCellId="../Mossies/4/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.6336033"/>
+            <connectionWD id="10" preCellId="../Mossies/7/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.7995834"/>
+            <connectionWD id="11" preCellId="../Mossies/0/MossyFiber" postCellId="../SingleGranule/0/Granule_98" preSegmentId="0" preFractionAlong="0.5" postSegmentId="0" postFractionAlong="0.5" delay="0.01 s" weight="0.10080087"/>
+        </projection>
+
+        <inputList id="Input_11" component="Input_11" population="Mossies">
+            <input id="0" target="../Mossies/0/MossyFiber" destination="synapses"/>
+            <input id="1" target="../Mossies/1/MossyFiber" destination="synapses"/>
+            <input id="2" target="../Mossies/2/MossyFiber" destination="synapses"/>
+            <input id="3" target="../Mossies/3/MossyFiber" destination="synapses"/>
+            <input id="4" target="../Mossies/4/MossyFiber" destination="synapses"/>
+            <input id="5" target="../Mossies/5/MossyFiber" destination="synapses"/>
+            <input id="6" target="../Mossies/6/MossyFiber" destination="synapses"/>
+            <input id="7" target="../Mossies/7/MossyFiber" destination="synapses"/>
+            <input id="8" target="../Mossies/8/MossyFiber" destination="synapses"/>
+            <input id="9" target="../Mossies/9/MossyFiber" destination="synapses"/>
+            <input id="10" target="../Mossies/10/MossyFiber" destination="synapses"/>
+            <input id="11" target="../Mossies/11/MossyFiber" destination="synapses"/>
+        </inputList>
+
+
+
+        <inputList id="Input_9" component="Input_9" population="Mossies">
+            <input id="0" target="../Mossies/0/MossyFiber" destination="synapses"/>
+        </inputList>
+
+
+
+        <inputList id="Input_10" component="Input_10" population="Mossies">
+            <input id="0" target="../Mossies/1/MossyFiber" destination="synapses"/>
+        </inputList>
+
+
+
+
+
+    </network>
+
+</neuroml>

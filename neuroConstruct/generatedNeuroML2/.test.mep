@@ -1,0 +1,7 @@
+system: Testing a single compartment cell
+
+experiments:
+  gran:
+    expected:
+        spike times: [40.37]
+  
