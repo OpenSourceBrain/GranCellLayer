@@ -85,23 +85,23 @@
         </Display>
     
         <Display id="GraphWin_0" title="GranCellLayer: Default Simulation Configuration, Grans, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE" xmin="-50.0" xmax="550.0" ymin="-104.0" ymax="64.0" timeScale="1ms">
-            <Line id="Grans_40 v" timeScale="1ms" quantity="Grans/40/Granule_98/v" scale="1 mV" color="#000000"/>
+            <Line id="Grans_23 v" timeScale="1ms" quantity="Grans/23/Granule_98/v" scale="1 mV" color="#000000"/>
         
-            <Line id="Grans_70 v" timeScale="1ms" quantity="Grans/70/Granule_98/v" scale="1 mV" color="#ff0000"/>
+            <Line id="Grans_21 v" timeScale="1ms" quantity="Grans/21/Granule_98/v" scale="1 mV" color="#ff0000"/>
         
-            <Line id="Grans_6 v" timeScale="1ms" quantity="Grans/6/Granule_98/v" scale="1 mV" color="#0000ff"/>
+            <Line id="Grans_0 v" timeScale="1ms" quantity="Grans/0/Granule_98/v" scale="1 mV" color="#0000ff"/>
         
-            <Line id="Grans_24 v" timeScale="1ms" quantity="Grans/24/Granule_98/v" scale="1 mV" color="#009b00"/>
+            <Line id="Grans_19 v" timeScale="1ms" quantity="Grans/19/Granule_98/v" scale="1 mV" color="#009b00"/>
         
-            <Line id="Grans_53 v" timeScale="1ms" quantity="Grans/53/Granule_98/v" scale="1 mV" color="#ffc800"/>
+            <Line id="Grans_61 v" timeScale="1ms" quantity="Grans/61/Granule_98/v" scale="1 mV" color="#ffc800"/>
         
-            <Line id="Grans_74 v" timeScale="1ms" quantity="Grans/74/Granule_98/v" scale="1 mV" color="#8c6400"/>
+            <Line id="Grans_30 v" timeScale="1ms" quantity="Grans/30/Granule_98/v" scale="1 mV" color="#8c6400"/>
         
-            <Line id="Grans_65 v" timeScale="1ms" quantity="Grans/65/Granule_98/v" scale="1 mV" color="#ff00ff"/>
+            <Line id="Grans_51 v" timeScale="1ms" quantity="Grans/51/Granule_98/v" scale="1 mV" color="#ff00ff"/>
         
-            <Line id="Grans_20 v" timeScale="1ms" quantity="Grans/20/Granule_98/v" scale="1 mV" color="#ffff00"/>
+            <Line id="Grans_42 v" timeScale="1ms" quantity="Grans/42/Granule_98/v" scale="1 mV" color="#ffff00"/>
         
-            <Line id="Grans_51 v" timeScale="1ms" quantity="Grans/51/Granule_98/v" scale="1 mV" color="#808080"/>
+            <Line id="Grans_45 v" timeScale="1ms" quantity="Grans/45/Granule_98/v" scale="1 mV" color="#808080"/>
         </Display>
     
         <OutputFile id="Golgis_v_0_0_OF" fileName="Golgis_0.0.dat">

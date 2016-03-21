@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_55" class="java.beans.XMLDecoder">
+<java version="1.8.0_72" class="java.beans.XMLDecoder">
 
 <!-- This is a neuroConstruct project file. It's best to open this
 file with neuroConstruct, as opposed to editing it directly. 
@@ -25,8 +25,8 @@ Note that the plots associated with these simulations slow the simulation down a
    <string>GranCellLayer</string>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.RegionsInfo">
-  <void property="internalData">
+ <object class="ucl.physiol.neuroconstruct.project.RegionsInfo" id="RegionsInfo0">
+  <void id="Hashtable0" property="internalData">
    <void method="get">
     <string>Name</string>
     <void method="add">
@@ -119,8 +119,8 @@ Note that the plots associated with these simulations slow the simulation down a
    <void method="get">
     <string>Description</string>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox0">
+      <void id="InternalParameterArray0" property="parameterList">
        <void id="InternalParameter0" index="3">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -152,8 +152,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox1">
+      <void id="InternalParameterArray1" property="parameterList">
        <void id="InternalParameter3" index="1">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -194,8 +194,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox2">
+      <void id="InternalParameterArray2" property="parameterList">
        <void id="InternalParameter7" index="1">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -236,8 +236,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox3">
+      <void id="InternalParameterArray3" property="parameterList">
        <void id="InternalParameter11" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -287,8 +287,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox4">
+      <void id="InternalParameterArray4" property="parameterList">
        <void id="InternalParameter16" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -338,8 +338,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox5">
+      <void id="InternalParameterArray5" property="parameterList">
        <void id="InternalParameter21" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -389,8 +389,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox6">
+      <void id="InternalParameterArray6" property="parameterList">
        <void id="InternalParameter26" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -440,8 +440,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.RectangularBox">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.RectangularBox" id="RectangularBox7">
+      <void id="InternalParameterArray7" property="parameterList">
        <void id="InternalParameter31" index="3">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -475,13 +475,13 @@ Note that the plots associated with these simulations slow the simulation down a
    </void>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.CellGroupsInfo">
-  <void property="internalData">
+ <object class="ucl.physiol.neuroconstruct.project.CellGroupsInfo" id="CellGroupsInfo0">
+  <void id="Hashtable1" property="internalData">
    <void method="get">
     <string>Cell Packing Adapter</string>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter" id="OneDimRegSpacingPackingAdapter0">
+      <void id="InternalParameterArray8" property="parameterList">
        <void id="InternalParameter34" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -504,8 +504,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter" id="OneDimRegSpacingPackingAdapter1">
+      <void id="InternalParameterArray9" property="parameterList">
        <void id="InternalParameter36" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -528,8 +528,8 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter">
-      <void property="parameterList">
+     <object class="ucl.physiol.neuroconstruct.project.packing.OneDimRegSpacingPackingAdapter" id="OneDimRegSpacingPackingAdapter2">
+      <void id="InternalParameterArray10" property="parameterList">
        <void id="InternalParameter38" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -552,11 +552,11 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter">
+     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter" id="RandomCellPackingAdapter0">
       <void property="maxNumberCells">
        <int>12</int>
       </void>
-      <void property="parameterList">
+      <void id="InternalParameterArray11" property="parameterList">
        <void id="InternalParameter40" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -570,11 +570,11 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter">
+     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter" id="RandomCellPackingAdapter1">
       <void property="maxNumberCells">
        <int>75</int>
       </void>
-      <void property="parameterList">
+      <void id="InternalParameterArray12" property="parameterList">
        <void id="InternalParameter41" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -588,11 +588,11 @@ Note that the plots associated with these simulations slow the simulation down a
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter">
+     <object class="ucl.physiol.neuroconstruct.project.packing.RandomCellPackingAdapter" id="RandomCellPackingAdapter2">
       <void property="maxNumberCells">
        <int>4</int>
       </void>
-      <void property="parameterList">
+      <void id="InternalParameterArray13" property="parameterList">
        <void id="InternalParameter42" index="0">
         <void class="ucl.physiol.neuroconstruct.project.InternalParameter" method="getField">
          <string>value</string>
@@ -951,7 +951,7 @@ Note that the plots associated with these simulations slow the simulation down a
    </void>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.SimPlotInfo">
+ <object class="ucl.physiol.neuroconstruct.project.SimPlotInfo" id="SimPlotInfo0">
   <void property="allSimPlots">
    <void method="add">
     <object class="ucl.physiol.neuroconstruct.project.SimPlot">
@@ -1885,6 +1885,34 @@ Note that the plots associated with these simulations slow the simulation down a
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="ucl.physiol.neuroconstruct.project.SimPlot">
+     <void property="cellGroup">
+      <string>Mossies</string>
+     </void>
+     <void property="cellNumber">
+      <string>*</string>
+     </void>
+     <void property="graphWindow">
+      <string>Mossies_v</string>
+     </void>
+     <void property="maxValue">
+      <float>50.0</float>
+     </void>
+     <void property="minValue">
+      <float>-90.0</float>
+     </void>
+     <void property="plotAndOrSave">
+      <string>Plot and save</string>
+     </void>
+     <void property="plotReference">
+      <string>Mossies_v_1</string>
+     </void>
+     <void property="segmentId">
+      <string>0</string>
+     </void>
+    </object>
+   </void>
   </void>
  </object>
  <object class="ucl.physiol.neuroconstruct.project.ProjectProperties"/>
@@ -1921,7 +1949,7 @@ Note that the plots associated with these simulations slow the simulation down a
    <boolean>false</boolean>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.neuron.NeuronSettings">
+ <object class="ucl.physiol.neuroconstruct.neuron.NeuronSettings" id="NeuronSettings0">
   <void property="copySimFiles">
    <boolean>true</boolean>
   </void>
@@ -1938,11 +1966,11 @@ Note that the plots associated with these simulations slow the simulation down a
     <string></string>
    </void>
    <void method="put">
-    <float>-1.0</float>
+    <float>1.0</float>
     <string></string>
    </void>
    <void method="put">
-    <float>1.0</float>
+    <float>-1.0</float>
     <string></string>
    </void>
    <void method="put">
@@ -1955,7 +1983,7 @@ Note that the plots associated with these simulations slow the simulation down a
    </void>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.genesis.GenesisSettings">
+ <object class="ucl.physiol.neuroconstruct.genesis.GenesisSettings" id="GenesisSettings0">
   <void property="nativeBlocks">
    <void method="put">
     <int>10</int>
@@ -1970,11 +1998,11 @@ Note that the plots associated with these simulations slow the simulation down a
     <string></string>
    </void>
    <void method="put">
-    <int>-1</int>
+    <int>1</int>
     <string></string>
    </void>
    <void method="put">
-    <int>1</int>
+    <int>-1</int>
     <string></string>
    </void>
   </void>
@@ -1994,7 +2022,7 @@ Note that the plots associated with these simulations slow the simulation down a
    <float>700.0</float>
   </void>
   <void property="reference">
-   <string>Sim_625</string>
+   <string>Sim_677</string>
   </void>
   <void property="saveCopyGenSimFiles">
    <boolean>true</boolean>
@@ -2006,7 +2034,7 @@ Note that the plots associated with these simulations slow the simulation down a
    <int>2</int>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.ElecInputInfo">
+ <object class="ucl.physiol.neuroconstruct.project.ElecInputInfo" id="ElecInputInfo0">
   <void property="allStims">
    <void method="add">
     <object class="ucl.physiol.neuroconstruct.simulation.RandomSpikeTrainSettings">
@@ -2090,7 +2118,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings">
+    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings" id="IClampSettings0">
      <void property="amp">
       <void property="fixedNum">
        <float>0.01</float>
@@ -2122,7 +2150,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings">
+    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings" id="IClampSettings1">
      <void property="amp">
       <void property="fixedNum">
        <float>0.02</float>
@@ -2181,7 +2209,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings">
+    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings" id="IClampSettings2">
      <void property="amp">
       <void property="fixedNum">
        <float>0.2</float>
@@ -2213,7 +2241,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings">
+    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings" id="IClampSettings3">
      <void property="amp">
       <void property="fixedNum">
        <float>-0.2</float>
@@ -2244,12 +2272,51 @@ Note that the plots associated with these simulations slow the simulation down a
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="ucl.physiol.neuroconstruct.simulation.IClampSettings" id="IClampSettings4">
+     <void id="NumberGenerator8" property="amp">
+      <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+       <string>distributionType</string>
+       <void method="set">
+        <object idref="NumberGenerator8"/>
+        <int>1</int>
+       </void>
+      </void>
+      <void property="fixedNum">
+       <float>0.0</float>
+      </void>
+     </void>
+     <void property="cellGroup">
+      <string>Mossies</string>
+     </void>
+     <void property="del">
+      <void property="fixedNum">
+       <float>0.0</float>
+      </void>
+     </void>
+     <void id="NumberGenerator9" property="dur">
+      <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+       <string>numberType</string>
+       <void method="set">
+        <object idref="NumberGenerator9"/>
+        <int>11</int>
+       </void>
+      </void>
+      <void property="fixedNum">
+       <float>10000.0</float>
+      </void>
+     </void>
+     <void property="reference">
+      <string>Input_8</string>
+     </void>
+    </object>
+   </void>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.SimConfigInfo">
+ <object class="ucl.physiol.neuroconstruct.project.SimConfigInfo" id="SimConfigInfo0">
   <void property="allSimConfigs">
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig0">
      <void property="cellGroups">
       <void method="add">
        <string>Golgis</string>
@@ -2303,7 +2370,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig1">
      <void property="cellGroups">
       <void method="add">
        <string>GoC_3D_Small</string>
@@ -2360,7 +2427,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig2">
      <void property="cellGroups">
       <void method="add">
        <string>GoC_3D</string>
@@ -2417,7 +2484,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig3">
      <void property="cellGroups">
       <void method="add">
        <string>SingleGranule</string>
@@ -2448,7 +2515,7 @@ Note that the plots associated with these simulations slow the simulation down a
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig4">
      <void property="cellGroups">
       <void method="add">
        <string>SingleGolgi</string>
@@ -2484,7 +2551,7 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig5">
      <void property="cellGroups">
       <void method="add">
        <string>TestScalingGoC</string>
@@ -2535,7 +2602,7 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     </object>
    </void>
    <void method="add">
-    <object class="ucl.physiol.neuroconstruct.project.SimConfig">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig6">
      <void property="cellGroups">
       <void method="add">
        <string>SingleGolgi</string>
@@ -2565,10 +2632,49 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="ucl.physiol.neuroconstruct.project.SimConfig" id="SimConfig7">
+     <void property="cellGroups">
+      <void method="add">
+       <string>Mossies</string>
+      </void>
+      <void method="add">
+       <string>SingleGranule</string>
+      </void>
+     </void>
+     <void property="description">
+      <string>One Granule cell getting input from MFs</string>
+     </void>
+     <void property="inputs">
+      <void method="add">
+       <string>Input_0</string>
+      </void>
+     </void>
+     <void property="name">
+      <string>TestSingleGranNet</string>
+     </void>
+     <void property="netConns">
+      <void method="add">
+       <string>NetConn_Mossies_SingleGranule</string>
+      </void>
+     </void>
+     <void property="plots">
+      <void method="add">
+       <string>Mossies_v_1</string>
+      </void>
+      <void method="add">
+       <string>SingleGranule_v</string>
+      </void>
+     </void>
+     <void property="simDuration">
+      <float>200.0</float>
+     </void>
+    </object>
+   </void>
   </void>
  </object>
- <object class="ucl.physiol.neuroconstruct.project.SimpleNetworkConnectionsInfo">
-  <void property="internalData">
+ <object class="ucl.physiol.neuroconstruct.project.SimpleNetworkConnectionsInfo" id="SimpleNetworkConnectionsInfo0">
+  <void id="Hashtable2" property="internalData">
    <void method="get">
     <string>Name</string>
     <void method="add">
@@ -2607,9 +2713,15 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     <void method="add">
      <string>NetConn_TestScalingGoC_TestScalingGrC</string>
     </void>
+    <void method="add">
+     <string>NetConn_Mossies_SingleGranule</string>
+    </void>
    </void>
    <void method="get">
     <string>AP speed</string>
+    <void method="add">
+     <float>3.4028235E38</float>
+    </void>
     <void method="add">
      <float>3.4028235E38</float>
     </void>
@@ -2654,11 +2766,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator8">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator10">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator8"/>
+            <object idref="NumberGenerator10"/>
             <int>11</int>
            </void>
           </void>
@@ -2705,11 +2817,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator9">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator11">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator9"/>
+            <object idref="NumberGenerator11"/>
             <int>11</int>
            </void>
           </void>
@@ -2760,11 +2872,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator10">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator12">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator10"/>
+            <object idref="NumberGenerator12"/>
             <int>11</int>
            </void>
           </void>
@@ -2812,11 +2924,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator11">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator13">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator11"/>
+            <object idref="NumberGenerator13"/>
             <int>11</int>
            </void>
           </void>
@@ -2864,11 +2976,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator12">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator14">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator12"/>
+            <object idref="NumberGenerator14"/>
             <int>11</int>
            </void>
           </void>
@@ -2912,11 +3024,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator13">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator15">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator13"/>
+            <object idref="NumberGenerator15"/>
             <int>11</int>
            </void>
           </void>
@@ -2964,11 +3076,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator14">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator16">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator14"/>
+            <object idref="NumberGenerator16"/>
             <int>11</int>
            </void>
           </void>
@@ -3016,11 +3128,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator15">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator17">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator15"/>
+            <object idref="NumberGenerator17"/>
             <int>11</int>
            </void>
           </void>
@@ -3068,11 +3180,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator16">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator18">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator16"/>
+            <object idref="NumberGenerator18"/>
             <int>11</int>
            </void>
           </void>
@@ -3116,11 +3228,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator17">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator19">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator17"/>
+            <object idref="NumberGenerator19"/>
             <int>11</int>
            </void>
           </void>
@@ -3168,11 +3280,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator18">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator20">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator18"/>
+            <object idref="NumberGenerator20"/>
             <int>11</int>
            </void>
           </void>
@@ -3220,11 +3332,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator19">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator21">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator19"/>
+            <object idref="NumberGenerator21"/>
             <int>11</int>
            </void>
           </void>
@@ -3272,11 +3384,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator20">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator22">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator20"/>
+            <object idref="NumberGenerator22"/>
             <int>11</int>
            </void>
           </void>
@@ -3320,11 +3432,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator21">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator23">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator21"/>
+            <object idref="NumberGenerator23"/>
             <int>11</int>
            </void>
           </void>
@@ -3372,11 +3484,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator22">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator24">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator22"/>
+            <object idref="NumberGenerator24"/>
             <int>11</int>
            </void>
           </void>
@@ -3424,11 +3536,11 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void method="add">
        <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
         <void property="delayGenerator">
-         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator23">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator25">
           <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
            <string>numberType</string>
            <void method="set">
-            <object idref="NumberGenerator23"/>
+            <object idref="NumberGenerator25"/>
             <int>11</int>
            </void>
           </void>
@@ -3464,6 +3576,100 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
           </void>
           <void property="min">
            <float>38.25</float>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="java.util.Vector">
+      <void method="add">
+       <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
+        <void property="delayGenerator">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator26">
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>numberType</string>
+           <void method="set">
+            <object idref="NumberGenerator26"/>
+            <int>11</int>
+           </void>
+          </void>
+          <void property="fixedNum">
+           <float>5.0</float>
+          </void>
+         </object>
+        </void>
+        <void property="synapseType">
+         <string>MF_AMPA</string>
+        </void>
+        <void property="threshold">
+         <double>-20.0</double>
+        </void>
+        <void property="weightsGenerator">
+         <object class="ucl.physiol.neuroconstruct.utils.WeightGenerator" id="WeightGenerator16">
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>distributionType</string>
+           <void method="set">
+            <object idref="WeightGenerator16"/>
+            <int>1</int>
+           </void>
+          </void>
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>numberType</string>
+           <void method="set">
+            <object idref="WeightGenerator16"/>
+            <int>11</int>
+           </void>
+          </void>
+          <void property="max">
+           <float>6.5</float>
+          </void>
+          <void property="min">
+           <float>5.5</float>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="ucl.physiol.neuroconstruct.project.SynapticProperties">
+        <void property="delayGenerator">
+         <object class="ucl.physiol.neuroconstruct.utils.NumberGenerator" id="NumberGenerator27">
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>numberType</string>
+           <void method="set">
+            <object idref="NumberGenerator27"/>
+            <int>11</int>
+           </void>
+          </void>
+          <void property="fixedNum">
+           <float>5.0</float>
+          </void>
+         </object>
+        </void>
+        <void property="synapseType">
+         <string>NMDA</string>
+        </void>
+        <void property="threshold">
+         <double>-20.0</double>
+        </void>
+        <void property="weightsGenerator">
+         <object class="ucl.physiol.neuroconstruct.utils.WeightGenerator" id="WeightGenerator17">
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>distributionType</string>
+           <void method="set">
+            <object idref="WeightGenerator17"/>
+            <int>1</int>
+           </void>
+          </void>
+          <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
+           <string>numberType</string>
+           <void method="set">
+            <object idref="WeightGenerator17"/>
+            <int>11</int>
+           </void>
           </void>
          </object>
         </void>
@@ -3508,6 +3714,9 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
        <int>200</int>
       </void>
      </object>
+    </void>
+    <void method="add">
+     <object class="ucl.physiol.neuroconstruct.project.MaxMinLength"/>
     </void>
     <void method="add">
      <object class="ucl.physiol.neuroconstruct.project.MaxMinLength"/>
@@ -3670,6 +3879,17 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       </void>
      </object>
     </void>
+    <void method="add">
+     <object class="ucl.physiol.neuroconstruct.project.SearchPattern" id="SearchPattern12">
+      <void class="ucl.physiol.neuroconstruct.project.SearchPattern" method="getField">
+       <string>type</string>
+       <void method="set">
+        <object idref="SearchPattern12"/>
+        <int>0</int>
+       </void>
+      </void>
+     </object>
+    </void>
    </void>
    <void method="get">
     <string>Source</string>
@@ -3709,11 +3929,14 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     <void method="add">
      <string>TestScalingGoC</string>
     </void>
+    <void method="add">
+     <string>Mossies</string>
+    </void>
    </void>
    <void method="get">
     <string>Connectivity Conditions</string>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions0">
       <void property="generationDirection">
        <int>1</int>
       </void>
@@ -3738,7 +3961,34 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions1">
+      <void property="numConnsInitiatingCellGroup">
+       <void property="fixedNum">
+        <float>4.0</float>
+       </void>
+      </void>
+      <void property="onlyConnectToUniqueCells">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions2">
+      <void property="generationDirection">
+       <int>1</int>
+      </void>
+      <void property="numConnsInitiatingCellGroup">
+       <void property="fixedNum">
+        <float>4.0</float>
+       </void>
+      </void>
+      <void property="onlyConnectToUniqueCells">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions3">
       <void property="numConnsInitiatingCellGroup">
        <void property="fixedNum">
         <float>4.0</float>
@@ -3754,48 +4004,21 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       <void property="generationDirection">
        <int>1</int>
       </void>
-      <void property="numConnsInitiatingCellGroup">
-       <void property="fixedNum">
-        <float>4.0</float>
-       </void>
-      </void>
       <void property="onlyConnectToUniqueCells">
        <boolean>true</boolean>
       </void>
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
-      <void property="numConnsInitiatingCellGroup">
-       <void property="fixedNum">
-        <float>4.0</float>
-       </void>
-      </void>
-      <void property="onlyConnectToUniqueCells">
-       <boolean>true</boolean>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions4">
       <void property="generationDirection">
        <int>1</int>
       </void>
-      <void property="onlyConnectToUniqueCells">
-       <boolean>true</boolean>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
-      <void property="generationDirection">
-       <int>1</int>
-      </void>
-      <void id="NumberGenerator24" property="numConnsInitiatingCellGroup">
+      <void id="NumberGenerator28" property="numConnsInitiatingCellGroup">
        <void class="ucl.physiol.neuroconstruct.utils.NumberGenerator" method="getField">
         <string>distributionType</string>
         <void method="set">
-         <object idref="NumberGenerator24"/>
+         <object idref="NumberGenerator28"/>
          <int>2</int>
         </void>
        </void>
@@ -3818,7 +4041,7 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions5">
       <void property="numConnsInitiatingCellGroup">
        <void property="fixedNum">
         <float>4.0</float>
@@ -3840,7 +4063,7 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions6">
       <void property="allowAutapses">
        <boolean>false</boolean>
       </void>
@@ -3855,7 +4078,7 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
      </object>
     </void>
     <void method="add">
-     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions7">
       <void property="allowAutapses">
        <boolean>false</boolean>
       </void>
@@ -3873,6 +4096,21 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
       </void>
       <void property="generationDirection">
        <int>1</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="ucl.physiol.neuroconstruct.project.ConnectivityConditions" id="ConnectivityConditions8">
+      <void property="allowAutapses">
+       <boolean>false</boolean>
+      </void>
+      <void property="generationDirection">
+       <int>1</int>
+      </void>
+      <void property="numConnsInitiatingCellGroup">
+       <void property="fixedNum">
+        <float>4.0</float>
+       </void>
       </void>
      </object>
     </void>
@@ -3914,6 +4152,9 @@ Note: the granule cell model&apos;s Ca reversal potential is fixed at 80mV due t
     </void>
     <void method="add">
      <string>TestScalingGrC</string>
+    </void>
+    <void method="add">
+     <string>SingleGranule</string>
     </void>
    </void>
   </void>
