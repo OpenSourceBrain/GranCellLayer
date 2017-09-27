@@ -22,3 +22,5 @@ Net_5*.h5
 Net_5*.nml
 *.*~
 /neuroConstruct/generatedNeuroML2/simulator.props
+/neuroConstruct/generatedNeuroML2/LEMS_TestNet_netpyne.py
+/neuroConstruct/generatedNeuroML2/LEMS_TestNet_netpyne.py_main.json
