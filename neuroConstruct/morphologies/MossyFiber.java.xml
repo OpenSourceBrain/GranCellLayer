@@ -56,7 +56,7 @@
    </void>
   </void>
   <void property="cellDescription">
-   <string>A Simple cell for testing purposes</string>
+   <string>Cell for Mossy Fiber input. Just a passive cell which relays spiking input which is applied to it.</string>
   </void>
   <void property="chanMechsVsGroups">
    <void method="put">
