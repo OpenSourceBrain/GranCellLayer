@@ -26,3 +26,4 @@ Net_5*.nml
 /neuroConstruct/generatedNeuroML2/LEMS_TestNet_netpyne.py_main.json
 /neuroConstruct/generatedNeuroML2/LEMS_GranCellLayer_netpyne.py
 /neuroConstruct/generatedNeuroML2/LEMS_GranCellLayer_netpyne.py_main.json
+/neuroConstruct/generatedNeuroML2/*.gv*
