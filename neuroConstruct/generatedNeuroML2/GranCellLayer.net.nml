@@ -46,6 +46,8 @@ Network connection: NetConn_Grans_Golgis contains 300 individual synaptic connec
     
     <network id="network_GranCellLayer" type="networkWithTemperature" temperature="32.0 degC">
 
+        <property tag="recommended_dt_ms" value="0.01"/>
+        <property tag="recommended_duration_ms" value="1000"/>
         
 
         <population id="Golgis" component="Golgi_98" type="populationList" size="4">
