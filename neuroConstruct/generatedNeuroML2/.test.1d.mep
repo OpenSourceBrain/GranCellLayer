@@ -3,5 +3,5 @@ system: Testing a single compartment cell
 experiments:
   gran0:
     expected:
-        spike times: [6.01, 102.67999999999999, 256.03, 368.0, 404.13]
+        spike times: [299.65999999999997, 379.94, 421.46, 454.23999999999995]
   
