@@ -34,3 +34,5 @@ Net_5*.nml
 /NeuroML2/*.spikes
 /NeuroML2/report.*.txt
 /NeuroML2/nmllite
+*_netpyne.py
+*.gv*

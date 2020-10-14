@@ -18,7 +18,7 @@
         "recordSpikes": {
             "GrCs": "*",
             "Gols": "*",
-            "expoisson": "*"
+            "MFs": "*"
         }
     }
 }

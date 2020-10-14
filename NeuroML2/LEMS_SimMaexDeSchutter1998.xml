@@ -1,0 +1,76 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.5.6 (libNeuroML v0.2.52)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="SimMaexDeSchutter1998" reportFile="report.SimMaexDeSchutter1998.txt"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="PyNN.xml"/>
+    <Include file="MaexDeSchutter1998.net.nml"/>
+    <Include file="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Granule_98.cell.nml"/>
+    <Include file="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Golgi_98.cell.nml"/>
+   
+    <Simulation id="SimMaexDeSchutter1998" length="600.0ms" step="0.015ms" target="MaexDeSchutter1998" seed="123">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="Gols_v" title="Plots of Gols_v" timeScale="1ms" xmin="-60.0" xmax="660.0" ymin="-80" ymax="40">
+            <Line id="Gols_0_Golgi_98_v" quantity="Gols/0/Golgi_98/v" scale="1mV" color="#d54f33" timeScale="1ms"/>
+            <Line id="Gols_1_Golgi_98_v" quantity="Gols/1/Golgi_98/v" scale="1mV" color="#0534e4" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="GrCs_v" title="Plots of GrCs_v" timeScale="1ms" xmin="-60.0" xmax="660.0" ymin="-80" ymax="40">
+            <Line id="GrCs_0_Granule_98_v" quantity="GrCs/0/Granule_98/v" scale="1mV" color="#98e752" timeScale="1ms"/>
+            <Line id="GrCs_1_Granule_98_v" quantity="GrCs/1/Granule_98/v" scale="1mV" color="#bca074" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="SimMaexDeSchutter1998_Gols_v_dat" fileName="SimMaexDeSchutter1998.Gols.v.dat">
+            <OutputColumn id="Gols_0_Golgi_98_v" quantity="Gols/0/Golgi_98/v"/> 
+            <OutputColumn id="Gols_1_Golgi_98_v" quantity="Gols/1/Golgi_98/v"/> 
+        </OutputFile>
+        
+        <OutputFile id="SimMaexDeSchutter1998_GrCs_v_dat" fileName="SimMaexDeSchutter1998.GrCs.v.dat">
+            <OutputColumn id="GrCs_0_Granule_98_v" quantity="GrCs/0/Granule_98/v"/> 
+            <OutputColumn id="GrCs_1_Granule_98_v" quantity="GrCs/1/Granule_98/v"/> 
+        </OutputFile>
+        
+        <EventOutputFile id="SimMaexDeSchutter1998_Gols_spikes" fileName="SimMaexDeSchutter1998.Gols.spikes" format="ID_TIME">
+            <EventSelection id="0" select="Gols/0/Golgi_98" eventPort="spike"/> 
+            <EventSelection id="1" select="Gols/1/Golgi_98" eventPort="spike"/> 
+            <EventSelection id="2" select="Gols/2/Golgi_98" eventPort="spike"/> 
+            <EventSelection id="3" select="Gols/3/Golgi_98" eventPort="spike"/> 
+        </EventOutputFile>
+        
+        <EventOutputFile id="SimMaexDeSchutter1998_GrCs_spikes" fileName="SimMaexDeSchutter1998.GrCs.spikes" format="ID_TIME">
+            <EventSelection id="0" select="GrCs/0/Granule_98" eventPort="spike"/> 
+            <EventSelection id="1" select="GrCs/1/Granule_98" eventPort="spike"/> 
+            <EventSelection id="2" select="GrCs/2/Granule_98" eventPort="spike"/> 
+            <EventSelection id="3" select="GrCs/3/Granule_98" eventPort="spike"/> 
+            <EventSelection id="4" select="GrCs/4/Granule_98" eventPort="spike"/> 
+        </EventOutputFile>
+        
+        <EventOutputFile id="SimMaexDeSchutter1998_MFs_spikes" fileName="SimMaexDeSchutter1998.MFs.spikes" format="ID_TIME">
+            <EventSelection id="0" select="MFs/0/poisson_input" eventPort="spike"/> 
+            <EventSelection id="1" select="MFs/1/poisson_input" eventPort="spike"/> 
+            <EventSelection id="2" select="MFs/2/poisson_input" eventPort="spike"/> 
+            <EventSelection id="3" select="MFs/3/poisson_input" eventPort="spike"/> 
+            <EventSelection id="4" select="MFs/4/poisson_input" eventPort="spike"/> 
+            <EventSelection id="5" select="MFs/5/poisson_input" eventPort="spike"/> 
+            <EventSelection id="6" select="MFs/6/poisson_input" eventPort="spike"/> 
+            <EventSelection id="7" select="MFs/7/poisson_input" eventPort="spike"/> 
+            <EventSelection id="8" select="MFs/8/poisson_input" eventPort="spike"/> 
+            <EventSelection id="9" select="MFs/9/poisson_input" eventPort="spike"/> 
+            <EventSelection id="10" select="MFs/10/poisson_input" eventPort="spike"/> 
+            <EventSelection id="11" select="MFs/11/poisson_input" eventPort="spike"/> 
+        </EventOutputFile>
+        
+    </Simulation>
+
+</Lems>

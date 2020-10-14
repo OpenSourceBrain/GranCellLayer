@@ -3,8 +3,9 @@
         "version": "NeuroMLlite v0.2.1",
         "temperature": 32.0,
         "parameters": {
-            "num_GrC": 2,
-            "num_Gol": 2,
+            "num_MF": 12,
+            "num_GrC": 75,
+            "num_Gol": 4,
             "mf_rate": 50
         },
         "notes": "Example 7: MaexDeSchutter1998",
@@ -32,21 +33,23 @@
         ],
         "synapses": [
             {
-                "ampa": {
-                    "pynn_synapse_type": "curr_alpha",
-                    "pynn_receptor_type": "excitatory",
-                    "parameters": {
-                        "tau_syn": 0.1
-                    }
+                "MF_AMPA": {
+                    "neuroml2_source_file": "MF_AMPA.synapse.nml"
                 }
             },
             {
-                "gaba": {
-                    "pynn_synapse_type": "curr_alpha",
-                    "pynn_receptor_type": "inhibitory",
-                    "parameters": {
-                        "tau_syn": 0.1
-                    }
+                "NMDA": {
+                    "neuroml2_source_file": "NMDA.synapse.nml"
+                }
+            },
+            {
+                "AMPA_GranGol": {
+                    "neuroml2_source_file": "AMPA_GranGol.synapse.nml"
+                }
+            },
+            {
+                "GABAA": {
+                    "neuroml2_source_file": "GABAA.synapse.nml"
                 }
             }
         ],
@@ -68,7 +71,7 @@
                     "size": "num_GrC",
                     "component": "Granule_98",
                     "properties": {
-                        "color": ".9 0 0"
+                        "color": ".8 0 0"
                     },
                     "random_layout": {
                         "region": "GranuleCellLayer"
@@ -80,7 +83,7 @@
                     "size": "num_Gol",
                     "component": "Golgi_98",
                     "properties": {
-                        "color": ".9 0.9 0"
+                        "color": "0 0.8 0"
                     },
                     "random_layout": {
                         "region": "GranuleCellLayer"
@@ -88,11 +91,11 @@
                 }
             },
             {
-                "expoisson": {
-                    "size": "num_GrC",
+                "MFs": {
+                    "size": "num_MF",
                     "component": "poisson_input",
                     "properties": {
-                        "color": "0.9 0.7 0.7",
+                        "color": "0 0 0.8",
                         "radius": 3
                     },
                     "random_layout": {
@@ -103,13 +106,51 @@
         ],
         "projections": [
             {
-                "projEinput": {
-                    "presynaptic": "expoisson",
+                "proj_mf_grc_ampa": {
+                    "presynaptic": "MFs",
                     "postsynaptic": "GrCs",
-                    "synapse": "ampa",
+                    "synapse": "MF_AMPA",
                     "delay": 0,
-                    "weight": 0.1,
-                    "one_to_one_connector": {}
+                    "weight": 6,
+                    "random_connectivity": {
+                        "probability": "0.33"
+                    }
+                }
+            },
+            {
+                "proj_mf_grc_nmda": {
+                    "presynaptic": "MFs",
+                    "postsynaptic": "GrCs",
+                    "synapse": "NMDA",
+                    "delay": 0,
+                    "weight": 4,
+                    "random_connectivity": {
+                        "probability": "0.33"
+                    }
+                }
+            },
+            {
+                "proj_grc_gol_ampa": {
+                    "presynaptic": "GrCs",
+                    "postsynaptic": "Gols",
+                    "synapse": "AMPA_GranGol",
+                    "delay": 0,
+                    "weight": 0.6,
+                    "random_connectivity": {
+                        "probability": "1"
+                    }
+                }
+            },
+            {
+                "proj_gol_grc_ampa": {
+                    "presynaptic": "Gols",
+                    "postsynaptic": "GrCs",
+                    "synapse": "GABAA",
+                    "delay": 0,
+                    "weight": 45,
+                    "random_connectivity": {
+                        "probability": "0.33"
+                    }
                 }
             }
         ]

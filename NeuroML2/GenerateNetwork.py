@@ -19,8 +19,9 @@ def generate():
     net.notes = 'Example 7: MaexDeSchutter1998'
     net.temperature = 32.0 # degC
     
-    net.parameters = {'num_GrC':   2,
-                      'num_Gol':   2,
+    net.parameters = {'num_MF':    12,
+                      'num_GrC':   75,
+                      'num_Gol':   4,
                       'mf_rate':   50}
 
     grc = Cell(id='Granule_98', neuroml2_source_file='Granule_98.cell.nml')
@@ -28,13 +29,12 @@ def generate():
     gol = Cell(id='Golgi_98', neuroml2_source_file='Golgi_98.cell.nml')
     net.cells.append(gol)
 
-
-
     poisson_input = Cell(id='poisson_input', pynn_cell='SpikeSourcePoisson')
     poisson_input.parameters = { 'rate':       'mf_rate',
                              'start':      0,
                              'duration':   1e9}
     net.cells.append(poisson_input)
+    
 
     r1 = RectangularRegion(id='GranuleCellLayer', x=0,y=0,z=0,width=1000,height=100,depth=1000)
     net.regions.append(r1)
@@ -42,57 +42,75 @@ def generate():
     pop_grc = Population(id='GrCs', 
                     size='num_GrC', 
                     component=grc.id, 
-                    properties={'color':'.9 0 0'},
+                    properties={'color':'.8 0 0'},
                     random_layout = RandomLayout(region=r1.id))
     net.populations.append(pop_grc)
 
     pop_gol = Population(id='Gols', 
                     size='num_Gol', 
                     component=gol.id, 
-                    properties={'color':'.9 0.9 0'},
+                    properties={'color':'0 0.8 0'},
                     random_layout = RandomLayout(region=r1.id))
     net.populations.append(pop_gol)
                  
-    pEpoisson = Population(id='expoisson', 
-                           size='num_GrC', 
+    pop_mf = Population(id='MFs', 
+                           size='num_MF', 
                            component=poisson_input.id, 
-                           properties={'color':'0.9 0.7 0.7', 'radius':3},
+                           properties={'color':'0 0 0.8', 'radius':3},
                            random_layout = RandomLayout(region=r1.id))
-    net.populations.append(pEpoisson)
-    '''
-    pI = Population(id='Ipop', 
-                    size='1*order', 
-                    component=cell.id, 
-                    properties={'color':'0 0 .9', 'radius':5},
-                    random_layout = RandomLayout(region=r1.id))
-    pIpoisson = Population(id='inpoisson', 
-                           size='1*order', 
-                           component=poisson_input.id, 
-                           properties={'color':'0.7 0.7 0.9', 'radius':3},
-                           random_layout = RandomLayout(region=r1.id))'''
-
-    '''net.populations.append(pI)
-    net.populations.append(pIpoisson)'''
+    net.populations.append(pop_mf)
+    
 
     
-    net.synapses.append(Synapse(id='ampa', 
-                                pynn_receptor_type='excitatory', 
-                                pynn_synapse_type='curr_alpha', 
-                                parameters={'tau_syn':0.1}))
+    mf_ampa_syn = Synapse(id='MF_AMPA', 
+                          neuroml2_source_file='MF_AMPA.synapse.nml')
+    net.synapses.append(mf_ampa_syn)
+    
+    nmda_syn = Synapse(id='NMDA', 
+                          neuroml2_source_file='NMDA.synapse.nml')
+    net.synapses.append(nmda_syn)
+    
+    ampa_gr_gol_syn = Synapse(id='AMPA_GranGol', 
+                          neuroml2_source_file='AMPA_GranGol.synapse.nml')
+    net.synapses.append(ampa_gr_gol_syn)
+    
+    gabaa_syn = Synapse(id='GABAA', 
+                          neuroml2_source_file='GABAA.synapse.nml')
+    net.synapses.append(gabaa_syn)
                                 
-    net.synapses.append(Synapse(id='gaba', 
-                                pynn_receptor_type='inhibitory', 
-                                pynn_synapse_type='curr_alpha', 
-                                parameters={'tau_syn':0.1}))
 
     
-    net.projections.append(Projection(id='projEinput',
-                                      presynaptic=pEpoisson.id, 
+    net.projections.append(Projection(id='proj_mf_grc_ampa',
+                                      presynaptic=pop_mf.id, 
                                       postsynaptic=pop_grc.id,
-                                      synapse='ampa',
+                                      synapse=mf_ampa_syn.id,
                                       delay=0,
-                                      weight=.1,
-                                      one_to_one_connector=OneToOneConnector()))
+                                      weight=6,
+                                      random_connectivity=RandomConnectivity(probability='0.33')))
+                                      
+    net.projections.append(Projection(id='proj_mf_grc_nmda',
+                                      presynaptic=pop_mf.id, 
+                                      postsynaptic=pop_grc.id,
+                                      synapse=nmda_syn.id,
+                                      delay=0,
+                                      weight=4,
+                                      random_connectivity=RandomConnectivity(probability='0.33')))
+                                      
+    net.projections.append(Projection(id='proj_grc_gol_ampa',
+                                      presynaptic=pop_grc.id, 
+                                      postsynaptic=pop_gol.id,
+                                      synapse=ampa_gr_gol_syn.id,
+                                      delay=0,
+                                      weight=.6,
+                                      random_connectivity=RandomConnectivity(probability='1')))
+                                      
+    net.projections.append(Projection(id='proj_gol_grc_ampa',
+                                      presynaptic=pop_gol.id, 
+                                      postsynaptic=pop_grc.id,
+                                      synapse=gabaa_syn.id,
+                                      delay=0,
+                                      weight=45,
+                                      random_connectivity=RandomConnectivity(probability='0.33')))
     '''
     net.projections.append(Projection(id='projIinput',
                                       presynaptic=pIpoisson.id, 
@@ -149,7 +167,7 @@ def generate():
                      dt=dt,
                      seed= 123,
                      recordTraces={pop_grc.id:[0,1],pop_gol.id:[0,1]},
-                     recordSpikes={pop_grc.id:'*',pop_gol.id:'*',pEpoisson.id:'*'})
+                     recordSpikes={pop_grc.id:'*',pop_gol.id:'*',pop_mf.id:'*'})
 
     sim.to_json_file()
     

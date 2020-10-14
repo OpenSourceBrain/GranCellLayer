@@ -3,20 +3,33 @@
     Generated network: MaexDeSchutter1998
     Generation seed: 1234
     NeuroMLlite parameters: 
-        mf_rate = 50
-        num_Gol = 2
-        num_GrC = 2</notes>
-    <include href="Granule_98.cell.nml"/>
-    <include href="Golgi_98.cell.nml"/>
-    <alphaCurrSynapse id="ampa" tau_syn="0.1"/>
-    <alphaCurrSynapse id="gaba" tau_syn="0.1"/>
-    <SpikeSourcePoisson id="poisson_input" start="0.0ms" duration="1000000000.0ms" rate="50.0Hz"/>
+        mf_rate = 5.0
+        num_Gol = 4.0
+        num_GrC = 5.0
+        num_MF = 12.0</notes>
+    <include href="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Granule_98.cell.nml"/>
+    <include href="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Golgi_98.cell.nml"/>
+    <expTwoSynapse id="MF_AMPA" gbase="1.1238527e-10S" erev="0V" tauDecay="5e-4s" tauRise="3e-5s">
+        <notes>Mossy fiber to Granule Cell AMPA synapse</notes>
+    </expTwoSynapse>
+    <expTwoSynapse id="AMPA_GranGol" gbase="1.137355e-9S" erev="0V" tauDecay="0.5e-3s" tauRise="3e-5s">
+        <notes>AMPA synaptic mechanism from Granule cells to Golgi cells</notes>
+    </expTwoSynapse>
+    <expTwoSynapse id="GABAA" gbase="3.14159E-10S" erev="-0.07V" tauDecay="0.0088333s" tauRise="3.1E-4s">
+        <notes>GABA A synaptic mechamism from Golgis to Granule cells</notes>
+    </expTwoSynapse>
+    <blockingPlasticSynapse id="NMDA" gbase="1.873087796e-10S" erev="0V" tauDecay="13.3333e-3s" tauRise="1e-3s">
+        <notes>Example of an NMDA receptor synaptic mechanism, based on Maex DeSchutter 1998, Gabbiani et al, 1994</notes>
+        <annotation/>
+        <blockMechanism type="voltageConcDepBlockMechanism" species="mg" blockConcentration="1.2mM" scalingConc="1.9205441817997078mM" scalingVolt="0.016129032258064516V"/>
+    </blockingPlasticSynapse>
+    <SpikeSourcePoisson id="poisson_input" start="0.0ms" duration="1000000000.0ms" rate="5.0Hz"/>
     <network id="MaexDeSchutter1998" type="networkWithTemperature" temperature="32.0degC">
         <notes>Example 7: MaexDeSchutter1998</notes>
-        <property tag="recommended_dt_ms" value="0.01"/>
-        <property tag="recommended_duration_ms" value="200.0"/>
-        <population id="GrCs" component="Granule_98" size="2" type="populationList">
-            <property tag="color" value=".9 0 0"/>
+        <property tag="recommended_dt_ms" value="0.015"/>
+        <property tag="recommended_duration_ms" value="600.0"/>
+        <population id="GrCs" component="Granule_98" size="5" type="populationList">
+            <property tag="color" value=".8 0 0"/>
             <property tag="region" value="GranuleCellLayer"/>
             <instance id="0">
                 <location x="966.453535692138757" y="44.073259917535268" z="7.491470058587191"/>
@@ -24,31 +37,146 @@
             <instance id="1">
                 <location x="910.975962449124154" y="93.926899736376399" z="582.227573058949133"/>
             </instance>
-        </population>
-        <population id="Gols" component="Golgi_98" size="2" type="populationList">
-            <property tag="color" value=".9 0.9 0"/>
-            <property tag="region" value="GranuleCellLayer"/>
-            <instance id="0">
+            <instance id="2">
                 <location x="671.563481487985086" y="8.393822683708397" z="766.480932791796249"/>
             </instance>
-            <instance id="1">
+            <instance id="3">
                 <location x="236.809775363117751" y="3.081402172660996" z="788.772717236283484"/>
             </instance>
+            <instance id="4">
+                <location x="346.088965597123092" y="62.328147503916853" z="615.815695103615212"/>
+            </instance>
         </population>
-        <population id="expoisson" component="poisson_input" size="2" type="populationList">
-            <property tag="color" value="0.9 0.7 0.7"/>
+        <population id="Gols" component="Golgi_98" size="4" type="populationList">
+            <property tag="color" value="0 0.8 0"/>
+            <property tag="region" value="GranuleCellLayer"/>
+            <instance id="0">
+                <location x="148.55463870828757" y="18.309064740993165" z="114.412969688687639"/>
+            </instance>
+            <instance id="1">
+                <location x="14.618780486909122" y="48.675154060475833" z="964.901560916215658"/>
+            </instance>
+            <instance id="2">
+                <location x="64.562280977186077" y="54.108818555113025" z="465.898559008309576"/>
+            </instance>
+            <instance id="3">
+                <location x="601.463449561051448" y="8.892882999066231" z="579.002686187366521"/>
+            </instance>
+        </population>
+        <population id="MFs" component="poisson_input" size="12" type="populationList">
+            <property tag="color" value="0 0 0.8"/>
             <property tag="radius" value="3"/>
             <property tag="region" value="GranuleCellLayer"/>
             <instance id="0">
-                <location x="346.088965597123092" y="62.328147503916853" z="615.815695103615212"/>
+                <location x="269.585503819448263" y="55.643256055621556" z="644.634234178282668"/>
             </instance>
             <instance id="1">
-                <location x="148.55463870828757" y="18.309064740993165" z="114.412969688687639"/>
+                <location x="481.036371366518438" y="35.523914744298338" z="249.152121361208998"/>
+            </instance>
+            <instance id="2">
+                <location x="933.515498042346735" y="45.338801947649351" z="530.161206911590284"/>
+            </instance>
+            <instance id="3">
+                <location x="19.299566309716852" y="50.810192577979215" z="5.780237417743139"/>
+            </instance>
+            <instance id="4">
+                <location x="143.768427595595369" y="47.282692534740633" z="377.347440772596428"/>
+            </instance>
+            <instance id="5">
+                <location x="54.175198646142839" y="58.752850813106939" z="164.003223741961193"/>
+            </instance>
+            <instance id="6">
+                <location x="557.330237441468171" y="14.424572160190829" z="937.307084696224706"/>
+            </instance>
+            <instance id="7">
+                <location x="770.979971519774949" y="95.693312234940535" z="141.227764416499525"/>
+            </instance>
+            <instance id="8">
+                <location x="305.392708287698611" y="3.958962422796164" z="276.783694791692085"/>
+            </instance>
+            <instance id="9">
+                <location x="806.512505115603744" y="17.7343035278254" z="154.570514710789638"/>
+            </instance>
+            <instance id="10">
+                <location x="954.718655702394926" y="15.4551400089043" z="833.889294151231752"/>
+            </instance>
+            <instance id="11">
+                <location x="41.062806271807474" y="38.618352833582826" z="349.592301963692535"/>
             </instance>
         </population>
-        <projection id="projEinput" presynapticPopulation="expoisson" postsynapticPopulation="GrCs" synapse="ampa">
-            <connectionWD id="0" preCellId="../expoisson/0/poisson_input" postCellId="../GrCs/0/Granule_98" weight="0.1" delay="0ms"/>
-            <connectionWD id="1" preCellId="../expoisson/1/poisson_input" postCellId="../GrCs/1/Granule_98" weight="0.1" delay="0ms"/>
+        <projection id="proj_mf_grc_ampa" presynapticPopulation="MFs" postsynapticPopulation="GrCs" synapse="MF_AMPA">
+            <connectionWD id="0" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/0/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="1" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/1/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="2" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/2/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="3" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/4/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="4" preCellId="../MFs/4/poisson_input" postCellId="../GrCs/4/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="5" preCellId="../MFs/5/poisson_input" postCellId="../GrCs/1/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="6" preCellId="../MFs/5/poisson_input" postCellId="../GrCs/2/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="7" preCellId="../MFs/6/poisson_input" postCellId="../GrCs/2/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="8" preCellId="../MFs/6/poisson_input" postCellId="../GrCs/4/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="9" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/0/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="10" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/1/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="11" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/3/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="12" preCellId="../MFs/8/poisson_input" postCellId="../GrCs/1/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="13" preCellId="../MFs/8/poisson_input" postCellId="../GrCs/3/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="14" preCellId="../MFs/8/poisson_input" postCellId="../GrCs/4/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="15" preCellId="../MFs/9/poisson_input" postCellId="../GrCs/0/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="16" preCellId="../MFs/9/poisson_input" postCellId="../GrCs/2/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="17" preCellId="../MFs/11/poisson_input" postCellId="../GrCs/2/Granule_98" weight="6." delay="0ms"/>
+            <connectionWD id="18" preCellId="../MFs/11/poisson_input" postCellId="../GrCs/4/Granule_98" weight="6." delay="0ms"/>
+        </projection>
+        <projection id="proj_mf_grc_nmda" presynapticPopulation="MFs" postsynapticPopulation="GrCs" synapse="NMDA">
+            <connectionWD id="0" preCellId="../MFs/1/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="1" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/0/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="2" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="3" preCellId="../MFs/2/poisson_input" postCellId="../GrCs/2/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="4" preCellId="../MFs/3/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="5" preCellId="../MFs/3/poisson_input" postCellId="../GrCs/2/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="6" preCellId="../MFs/4/poisson_input" postCellId="../GrCs/0/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="7" preCellId="../MFs/6/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="8" preCellId="../MFs/6/poisson_input" postCellId="../GrCs/2/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="9" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/0/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="10" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="11" preCellId="../MFs/7/poisson_input" postCellId="../GrCs/3/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="12" preCellId="../MFs/8/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="13" preCellId="../MFs/9/poisson_input" postCellId="../GrCs/0/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="14" preCellId="../MFs/9/poisson_input" postCellId="../GrCs/1/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="15" preCellId="../MFs/9/poisson_input" postCellId="../GrCs/2/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="16" preCellId="../MFs/10/poisson_input" postCellId="../GrCs/4/Granule_98" weight="4." delay="0ms"/>
+            <connectionWD id="17" preCellId="../MFs/11/poisson_input" postCellId="../GrCs/2/Granule_98" weight="4." delay="0ms"/>
+        </projection>
+        <projection id="proj_grc_gol_ampa" presynapticPopulation="GrCs" postsynapticPopulation="Gols" synapse="AMPA_GranGol">
+            <connectionWD id="0" preCellId="../GrCs/0/Granule_98" postCellId="../Gols/0/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="1" preCellId="../GrCs/0/Granule_98" postCellId="../Gols/1/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="2" preCellId="../GrCs/0/Granule_98" postCellId="../Gols/2/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="3" preCellId="../GrCs/0/Granule_98" postCellId="../Gols/3/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="4" preCellId="../GrCs/1/Granule_98" postCellId="../Gols/0/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="5" preCellId="../GrCs/1/Granule_98" postCellId="../Gols/1/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="6" preCellId="../GrCs/1/Granule_98" postCellId="../Gols/2/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="7" preCellId="../GrCs/1/Granule_98" postCellId="../Gols/3/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="8" preCellId="../GrCs/2/Granule_98" postCellId="../Gols/0/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="9" preCellId="../GrCs/2/Granule_98" postCellId="../Gols/1/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="10" preCellId="../GrCs/2/Granule_98" postCellId="../Gols/2/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="11" preCellId="../GrCs/2/Granule_98" postCellId="../Gols/3/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="12" preCellId="../GrCs/3/Granule_98" postCellId="../Gols/0/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="13" preCellId="../GrCs/3/Granule_98" postCellId="../Gols/1/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="14" preCellId="../GrCs/3/Granule_98" postCellId="../Gols/2/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="15" preCellId="../GrCs/3/Granule_98" postCellId="../Gols/3/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="16" preCellId="../GrCs/4/Granule_98" postCellId="../Gols/0/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="17" preCellId="../GrCs/4/Granule_98" postCellId="../Gols/1/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="18" preCellId="../GrCs/4/Granule_98" postCellId="../Gols/2/Golgi_98" weight="0.6" delay="0ms"/>
+            <connectionWD id="19" preCellId="../GrCs/4/Granule_98" postCellId="../Gols/3/Golgi_98" weight="0.6" delay="0ms"/>
+        </projection>
+        <projection id="proj_gol_grc_ampa" presynapticPopulation="Gols" postsynapticPopulation="GrCs" synapse="GABAA">
+            <connectionWD id="0" preCellId="../Gols/0/Golgi_98" postCellId="../GrCs/0/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="1" preCellId="../Gols/0/Golgi_98" postCellId="../GrCs/1/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="2" preCellId="../Gols/0/Golgi_98" postCellId="../GrCs/3/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="3" preCellId="../Gols/1/Golgi_98" postCellId="../GrCs/3/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="4" preCellId="../Gols/1/Golgi_98" postCellId="../GrCs/4/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="5" preCellId="../Gols/2/Golgi_98" postCellId="../GrCs/4/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="6" preCellId="../Gols/3/Golgi_98" postCellId="../GrCs/0/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="7" preCellId="../Gols/3/Golgi_98" postCellId="../GrCs/1/Granule_98" weight="45." delay="0ms"/>
+            <connectionWD id="8" preCellId="../Gols/3/Golgi_98" postCellId="../GrCs/2/Granule_98" weight="45." delay="0ms"/>
         </projection>
     </network>
 </neuroml>
