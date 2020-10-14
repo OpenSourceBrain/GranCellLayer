@@ -31,3 +31,6 @@ Net_5*.nml
 /NeuroML2/*.hoc
 /NeuroML2/*.dat
 /NeuroML2/*_nrn.py
+/NeuroML2/*.spikes
+/NeuroML2/report.*.txt
+/NeuroML2/nmllite

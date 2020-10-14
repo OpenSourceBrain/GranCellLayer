@@ -1,0 +1,117 @@
+{
+    "MaexDeSchutter1998": {
+        "version": "NeuroMLlite v0.2.1",
+        "temperature": 32.0,
+        "parameters": {
+            "num_GrC": 2,
+            "num_Gol": 2,
+            "mf_rate": 50
+        },
+        "notes": "Example 7: MaexDeSchutter1998",
+        "cells": [
+            {
+                "Granule_98": {
+                    "neuroml2_source_file": "Granule_98.cell.nml"
+                }
+            },
+            {
+                "Golgi_98": {
+                    "neuroml2_source_file": "Golgi_98.cell.nml"
+                }
+            },
+            {
+                "poisson_input": {
+                    "pynn_cell": "SpikeSourcePoisson",
+                    "parameters": {
+                        "rate": "mf_rate",
+                        "start": 0,
+                        "duration": 1000000000.0
+                    }
+                }
+            }
+        ],
+        "synapses": [
+            {
+                "ampa": {
+                    "pynn_synapse_type": "curr_alpha",
+                    "pynn_receptor_type": "excitatory",
+                    "parameters": {
+                        "tau_syn": 0.1
+                    }
+                }
+            },
+            {
+                "gaba": {
+                    "pynn_synapse_type": "curr_alpha",
+                    "pynn_receptor_type": "inhibitory",
+                    "parameters": {
+                        "tau_syn": 0.1
+                    }
+                }
+            }
+        ],
+        "regions": [
+            {
+                "GranuleCellLayer": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "width": 1000.0,
+                    "height": 100.0,
+                    "depth": 1000.0
+                }
+            }
+        ],
+        "populations": [
+            {
+                "GrCs": {
+                    "size": "num_GrC",
+                    "component": "Granule_98",
+                    "properties": {
+                        "color": ".9 0 0"
+                    },
+                    "random_layout": {
+                        "region": "GranuleCellLayer"
+                    }
+                }
+            },
+            {
+                "Gols": {
+                    "size": "num_Gol",
+                    "component": "Golgi_98",
+                    "properties": {
+                        "color": ".9 0.9 0"
+                    },
+                    "random_layout": {
+                        "region": "GranuleCellLayer"
+                    }
+                }
+            },
+            {
+                "expoisson": {
+                    "size": "num_GrC",
+                    "component": "poisson_input",
+                    "properties": {
+                        "color": "0.9 0.7 0.7",
+                        "radius": 3
+                    },
+                    "random_layout": {
+                        "region": "GranuleCellLayer"
+                    }
+                }
+            }
+        ],
+        "projections": [
+            {
+                "projEinput": {
+                    "presynaptic": "expoisson",
+                    "postsynaptic": "GrCs",
+                    "synapse": "ampa",
+                    "delay": 0,
+                    "weight": 0.1,
+                    "one_to_one_connector": {}
+                }
+            }
+        ]
+    }
+}
