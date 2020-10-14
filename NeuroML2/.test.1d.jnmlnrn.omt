@@ -1,0 +1,19 @@
+# Script for running automated tests on OSB using Travis-CI, see https://github.com/OpenSourceBrain/osb-model-validation
+
+target: LEMS_GranCellLayer.xml
+engine: jNeuroML_NEURON
+mep: ../neuroConstruct/generatedNeuroML2/.test.1d.mep
+experiments:
+  gran0:
+    observables:
+      spike times:
+        file:
+          path: Grans_0.0.SPIKE_min20.dat
+          columns: [0,1]
+          scaling: [1000, 1000]
+        spike detection:
+          method: threshold
+          threshold: 0
+        tolerance: 0.000
+
+      

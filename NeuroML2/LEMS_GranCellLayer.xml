@@ -1,0 +1,473 @@
+<Lems xmlns="http://www.neuroml.org/lems/0.7.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/lems/0.7.2  https://raw.githubusercontent.com/LEMS/LEMS/development/Schemas/LEMS/LEMS_v0.7.2.xsd">
+
+    <Target component="sim1" reportFile="simulator.props" timesFile="time.dat"/>
+
+        <!--Include standard NeuroML 2 ComponentType definitions-->
+
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    
+
+        <!--Include the generated NeuroML 2 files-->
+
+
+        <!--   Channel/synapse files-->
+    <Include file="AMPA_GranGol.synapse.nml"/>
+    <Include file="GABAA.synapse.nml"/>
+    <Include file="Golgi_CaHVA_CML.channel.nml"/>
+    <Include file="Golgi_CaPool_CML.nml"/>
+    <Include file="Golgi_H_CML.channel.nml"/>
+    <Include file="Golgi_KA_CML.channel.nml"/>
+    <Include file="Golgi_KCa_CML.channel.nml"/>
+    <Include file="Golgi_KDr_CML.channel.nml"/>
+    <Include file="Golgi_NaF_CML.channel.nml"/>
+    <Include file="GolgiPassiveCond.channel.nml"/>
+    <Include file="Gran_CaHVA_98.channel.nml"/>
+    <Include file="Gran_CaPool_98.nml"/>
+    <Include file="Gran_H_98.channel.nml"/>
+    <Include file="Gran_KA_98.channel.nml"/>
+    <Include file="Gran_KCa_98.channel.nml"/>
+    <Include file="Gran_KDr_98.channel.nml"/>
+    <Include file="Gran_NaF_98.channel.nml"/>
+    <Include file="GranPassiveCond.channel.nml"/>
+    <Include file="MF_AMPA.synapse.nml"/>
+    <Include file="MFFastLeakCond.channel.nml"/>
+    <Include file="MFSpikeSyn.synapse.nml"/>
+    <Include file="NMDA.synapse.nml"/>
+        <!--   Cell files-->
+    <Include file="Golgi_98.cell.nml"/>
+    <Include file="Granule_98.cell.nml"/>
+    <Include file="MossyFiber.cell.nml"/>
+        <!--   Network file-->
+    <Include file="GranCellLayer.net.nml"/>
+    
+
+        <!--Note: this could be: Simulation id="sim1" ... , but Component type="Simulation" ... 
+        is used to allow validation of this file according to the LEMS schema specified above...-->
+    <Component type="Simulation" id="sim1" length="500.0ms" step="0.01ms" target="network_GranCellLayer">
+        
+        <Display id="Golgis_v" title="GranCellLayer: Default Simulation Configuration, Golgis, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE" xmin="-50.0" xmax="550.0" ymin="-104.0" ymax="64.0" timeScale="1ms">
+            <Line id="Golgis_0 v" timeScale="1ms" quantity="Golgis/0/Golgi_98/v" scale="1 mV" color="#000000"/>
+        
+            <Line id="Golgis_1 v" timeScale="1ms" quantity="Golgis/1/Golgi_98/v" scale="1 mV" color="#ff0000"/>
+        
+            <Line id="Golgis_2 v" timeScale="1ms" quantity="Golgis/2/Golgi_98/v" scale="1 mV" color="#0000ff"/>
+        
+            <Line id="Golgis_3 v" timeScale="1ms" quantity="Golgis/3/Golgi_98/v" scale="1 mV" color="#009b00"/>
+        </Display>
+    
+        <Display id="Mossies_v" title="GranCellLayer: Default Simulation Configuration, Mossies, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20, SPIKE:-20" xmin="-50.0" xmax="550.0" ymin="-104.0" ymax="64.0" timeScale="1ms">
+            <Line id="Mossies_0 SPIKE_-20" timeScale="1ms" quantity="Mossies/0/MossyFiber/v" scale="1" color="#000000"/>
+        
+            <Line id="Mossies_1 SPIKE_-20" timeScale="1ms" quantity="Mossies/1/MossyFiber/v" scale="1" color="#ff0000"/>
+        
+            <Line id="Mossies_2 SPIKE_-20" timeScale="1ms" quantity="Mossies/2/MossyFiber/v" scale="1" color="#0000ff"/>
+        
+            <Line id="Mossies_3 SPIKE_-20" timeScale="1ms" quantity="Mossies/3/MossyFiber/v" scale="1" color="#009b00"/>
+        
+            <Line id="Mossies_4 SPIKE_-20" timeScale="1ms" quantity="Mossies/4/MossyFiber/v" scale="1" color="#ffc800"/>
+        
+            <Line id="Mossies_5 SPIKE_-20" timeScale="1ms" quantity="Mossies/5/MossyFiber/v" scale="1" color="#8c6400"/>
+        
+            <Line id="Mossies_6 SPIKE_-20" timeScale="1ms" quantity="Mossies/6/MossyFiber/v" scale="1" color="#ff00ff"/>
+        
+            <Line id="Mossies_7 SPIKE_-20" timeScale="1ms" quantity="Mossies/7/MossyFiber/v" scale="1" color="#ffff00"/>
+        
+            <Line id="Mossies_8 SPIKE_-20" timeScale="1ms" quantity="Mossies/8/MossyFiber/v" scale="1" color="#808080"/>
+        
+            <Line id="Mossies_9 SPIKE_-20" timeScale="1ms" quantity="Mossies/9/MossyFiber/v" scale="1" color="#000000"/>
+        
+            <Line id="Mossies_10 SPIKE_-20" timeScale="1ms" quantity="Mossies/10/MossyFiber/v" scale="1" color="#ff0000"/>
+        
+            <Line id="Mossies_11 SPIKE_-20" timeScale="1ms" quantity="Mossies/11/MossyFiber/v" scale="1" color="#0000ff"/>
+        </Display>
+    
+        <Display id="GraphWin_0" title="GranCellLayer: Default Simulation Configuration, Grans, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE, VOLTAGE" xmin="-50.0" xmax="550.0" ymin="-104.0" ymax="64.0" timeScale="1ms">
+            <Line id="Grans_23 v" timeScale="1ms" quantity="Grans/23/Granule_98/v" scale="1 mV" color="#000000"/>
+        
+            <Line id="Grans_21 v" timeScale="1ms" quantity="Grans/21/Granule_98/v" scale="1 mV" color="#ff0000"/>
+        
+            <Line id="Grans_0 v" timeScale="1ms" quantity="Grans/0/Granule_98/v" scale="1 mV" color="#0000ff"/>
+        
+            <Line id="Grans_19 v" timeScale="1ms" quantity="Grans/19/Granule_98/v" scale="1 mV" color="#009b00"/>
+        
+            <Line id="Grans_61 v" timeScale="1ms" quantity="Grans/61/Granule_98/v" scale="1 mV" color="#ffc800"/>
+        
+            <Line id="Grans_30 v" timeScale="1ms" quantity="Grans/30/Granule_98/v" scale="1 mV" color="#8c6400"/>
+        
+            <Line id="Grans_51 v" timeScale="1ms" quantity="Grans/51/Granule_98/v" scale="1 mV" color="#ff00ff"/>
+        
+            <Line id="Grans_42 v" timeScale="1ms" quantity="Grans/42/Granule_98/v" scale="1 mV" color="#ffff00"/>
+        
+            <Line id="Grans_45 v" timeScale="1ms" quantity="Grans/45/Granule_98/v" scale="1 mV" color="#808080"/>
+        </Display>
+    
+        <OutputFile id="Golgis_v_0_0_OF" fileName="Golgis_0.0.dat">
+            <OutputColumn id="v" quantity="Golgis/0/Golgi_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Golgis_v_1_0_OF" fileName="Golgis_1.0.dat">
+            <OutputColumn id="v" quantity="Golgis/1/Golgi_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Golgis_v_2_0_OF" fileName="Golgis_2.0.dat">
+            <OutputColumn id="v" quantity="Golgis/2/Golgi_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Golgis_v_3_0_OF" fileName="Golgis_3.0.dat">
+            <OutputColumn id="v" quantity="Golgis/3/Golgi_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_0_0_OF" fileName="Mossies_0.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/0/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_1_0_OF" fileName="Mossies_1.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/1/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_2_0_OF" fileName="Mossies_2.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/2/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_3_0_OF" fileName="Mossies_3.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/3/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_4_0_OF" fileName="Mossies_4.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/4/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_5_0_OF" fileName="Mossies_5.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/5/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_6_0_OF" fileName="Mossies_6.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/6/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_7_0_OF" fileName="Mossies_7.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/7/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_8_0_OF" fileName="Mossies_8.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/8/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_9_0_OF" fileName="Mossies_9.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/9/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_10_0_OF" fileName="Mossies_10.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/10/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Mossies_v_11_0_OF" fileName="Mossies_11.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Mossies/11/MossyFiber/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_0_0_OF" fileName="Grans_0.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/0/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_1_0_OF" fileName="Grans_1.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/1/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_2_0_OF" fileName="Grans_2.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/2/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_3_0_OF" fileName="Grans_3.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/3/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_4_0_OF" fileName="Grans_4.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/4/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_5_0_OF" fileName="Grans_5.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/5/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_6_0_OF" fileName="Grans_6.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/6/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_7_0_OF" fileName="Grans_7.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/7/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_8_0_OF" fileName="Grans_8.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/8/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_9_0_OF" fileName="Grans_9.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/9/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_10_0_OF" fileName="Grans_10.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/10/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_11_0_OF" fileName="Grans_11.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/11/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_12_0_OF" fileName="Grans_12.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/12/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_13_0_OF" fileName="Grans_13.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/13/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_14_0_OF" fileName="Grans_14.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/14/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_15_0_OF" fileName="Grans_15.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/15/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_16_0_OF" fileName="Grans_16.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/16/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_17_0_OF" fileName="Grans_17.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/17/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_18_0_OF" fileName="Grans_18.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/18/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_19_0_OF" fileName="Grans_19.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/19/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_20_0_OF" fileName="Grans_20.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/20/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_21_0_OF" fileName="Grans_21.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/21/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_22_0_OF" fileName="Grans_22.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/22/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_23_0_OF" fileName="Grans_23.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/23/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_24_0_OF" fileName="Grans_24.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/24/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_25_0_OF" fileName="Grans_25.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/25/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_26_0_OF" fileName="Grans_26.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/26/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_27_0_OF" fileName="Grans_27.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/27/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_28_0_OF" fileName="Grans_28.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/28/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_29_0_OF" fileName="Grans_29.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/29/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_30_0_OF" fileName="Grans_30.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/30/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_31_0_OF" fileName="Grans_31.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/31/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_32_0_OF" fileName="Grans_32.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/32/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_33_0_OF" fileName="Grans_33.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/33/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_34_0_OF" fileName="Grans_34.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/34/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_35_0_OF" fileName="Grans_35.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/35/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_36_0_OF" fileName="Grans_36.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/36/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_37_0_OF" fileName="Grans_37.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/37/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_38_0_OF" fileName="Grans_38.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/38/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_39_0_OF" fileName="Grans_39.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/39/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_40_0_OF" fileName="Grans_40.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/40/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_41_0_OF" fileName="Grans_41.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/41/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_42_0_OF" fileName="Grans_42.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/42/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_43_0_OF" fileName="Grans_43.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/43/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_44_0_OF" fileName="Grans_44.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/44/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_45_0_OF" fileName="Grans_45.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/45/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_46_0_OF" fileName="Grans_46.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/46/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_47_0_OF" fileName="Grans_47.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/47/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_48_0_OF" fileName="Grans_48.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/48/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_49_0_OF" fileName="Grans_49.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/49/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_50_0_OF" fileName="Grans_50.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/50/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_51_0_OF" fileName="Grans_51.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/51/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_52_0_OF" fileName="Grans_52.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/52/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_53_0_OF" fileName="Grans_53.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/53/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_54_0_OF" fileName="Grans_54.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/54/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_55_0_OF" fileName="Grans_55.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/55/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_56_0_OF" fileName="Grans_56.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/56/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_57_0_OF" fileName="Grans_57.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/57/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_58_0_OF" fileName="Grans_58.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/58/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_59_0_OF" fileName="Grans_59.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/59/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_60_0_OF" fileName="Grans_60.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/60/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_61_0_OF" fileName="Grans_61.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/61/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_62_0_OF" fileName="Grans_62.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/62/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_63_0_OF" fileName="Grans_63.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/63/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_64_0_OF" fileName="Grans_64.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/64/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_65_0_OF" fileName="Grans_65.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/65/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_66_0_OF" fileName="Grans_66.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/66/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_67_0_OF" fileName="Grans_67.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/67/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_68_0_OF" fileName="Grans_68.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/68/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_69_0_OF" fileName="Grans_69.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/69/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_70_0_OF" fileName="Grans_70.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/70/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_71_0_OF" fileName="Grans_71.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/71/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_72_0_OF" fileName="Grans_72.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/72/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_73_0_OF" fileName="Grans_73.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/73/Granule_98/v"/>
+        </OutputFile>
+    
+        <OutputFile id="Var_0_74_0_OF" fileName="Grans_74.0.SPIKE_min20.dat">
+            <OutputColumn id="v" quantity="Grans/74/Granule_98/v"/>
+        </OutputFile>
+    </Component>
+
+
+</Lems>
