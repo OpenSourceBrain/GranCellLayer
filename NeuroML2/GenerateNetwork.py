@@ -9,8 +9,8 @@ import sys
 
 def generate():
     
-    dt = 0.01
-    simtime = 200
+    dt = 0.015
+    simtime = 600
     
     ################################################################################
     ###   Build new network
@@ -19,10 +19,14 @@ def generate():
     net.notes = 'Example 7: MaexDeSchutter1998'
     net.temperature = 32.0 # degC
     
-    net.parameters = {'num_MF':    12,
-                      'num_GrC':   75,
-                      'num_Gol':   4,
-                      'mf_rate':   50}
+    net.parameters = {'num_MF':              12,
+                      'num_GrC':             75,
+                      'num_Gol':             4,
+                      'mf_rate':             50,
+                      'weight_mf_grc_ampa':  6,
+                      'weight_mf_grc_nmda':  4,
+                      'weight_grc_gol':      .6,
+                      'weight_gol_grc':      45}
 
     grc = Cell(id='Granule_98', neuroml2_source_file='Granule_98.cell.nml')
     net.cells.append(grc)
@@ -85,7 +89,7 @@ def generate():
                                       postsynaptic=pop_grc.id,
                                       synapse=mf_ampa_syn.id,
                                       delay=0,
-                                      weight=6,
+                                      weight='weight_mf_grc_ampa',
                                       random_connectivity=RandomConnectivity(probability='0.33')))
                                       
     net.projections.append(Projection(id='proj_mf_grc_nmda',
@@ -93,7 +97,7 @@ def generate():
                                       postsynaptic=pop_grc.id,
                                       synapse=nmda_syn.id,
                                       delay=0,
-                                      weight=4,
+                                      weight='weight_mf_grc_nmda',
                                       random_connectivity=RandomConnectivity(probability='0.33')))
                                       
     net.projections.append(Projection(id='proj_grc_gol_ampa',
@@ -101,15 +105,15 @@ def generate():
                                       postsynaptic=pop_gol.id,
                                       synapse=ampa_gr_gol_syn.id,
                                       delay=0,
-                                      weight=.6,
-                                      random_connectivity=RandomConnectivity(probability='1')))
+                                      weight='weight_grc_gol',
+                                      random_connectivity=RandomConnectivity(probability='.9')))
                                       
     net.projections.append(Projection(id='proj_gol_grc_ampa',
                                       presynaptic=pop_gol.id, 
                                       postsynaptic=pop_grc.id,
                                       synapse=gabaa_syn.id,
                                       delay=0,
-                                      weight=45,
+                                      weight='weight_gol_grc',
                                       random_connectivity=RandomConnectivity(probability='0.33')))
     '''
     net.projections.append(Projection(id='projIinput',
@@ -166,7 +170,7 @@ def generate():
                      duration=simtime,
                      dt=dt,
                      seed= 123,
-                     recordTraces={pop_grc.id:[0,1],pop_gol.id:[0,1]},
+                     recordTraces={pop_grc.id:[0,1],pop_gol.id:'*'},
                      recordSpikes={pop_grc.id:'*',pop_gol.id:'*',pop_mf.id:'*'})
 
     sim.to_json_file()

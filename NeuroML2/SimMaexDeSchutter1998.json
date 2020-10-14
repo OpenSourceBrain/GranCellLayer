@@ -2,18 +2,15 @@
     "SimMaexDeSchutter1998": {
         "version": "NeuroMLlite v0.2.1",
         "network": "MaexDeSchutter1998.json",
-        "duration": 200.0,
-        "dt": 0.01,
+        "duration": 600.0,
+        "dt": 0.015,
         "seed": 123,
         "recordTraces": {
             "GrCs": [
                 0,
                 1
             ],
-            "Gols": [
-                0,
-                1
-            ]
+            "Gols": "*"
         },
         "recordSpikes": {
             "GrCs": "*",

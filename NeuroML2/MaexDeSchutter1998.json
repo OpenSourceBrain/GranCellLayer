@@ -6,7 +6,11 @@
             "num_MF": 12,
             "num_GrC": 75,
             "num_Gol": 4,
-            "mf_rate": 50
+            "mf_rate": 50,
+            "weight_mf_grc_ampa": 6,
+            "weight_mf_grc_nmda": 4,
+            "weight_grc_gol": 0.6,
+            "weight_gol_grc": 45
         },
         "notes": "Example 7: MaexDeSchutter1998",
         "cells": [
@@ -111,7 +115,7 @@
                     "postsynaptic": "GrCs",
                     "synapse": "MF_AMPA",
                     "delay": 0,
-                    "weight": 6,
+                    "weight": "weight_mf_grc_ampa",
                     "random_connectivity": {
                         "probability": "0.33"
                     }
@@ -123,7 +127,7 @@
                     "postsynaptic": "GrCs",
                     "synapse": "NMDA",
                     "delay": 0,
-                    "weight": 4,
+                    "weight": "weight_mf_grc_nmda",
                     "random_connectivity": {
                         "probability": "0.33"
                     }
@@ -135,9 +139,9 @@
                     "postsynaptic": "Gols",
                     "synapse": "AMPA_GranGol",
                     "delay": 0,
-                    "weight": 0.6,
+                    "weight": "weight_grc_gol",
                     "random_connectivity": {
-                        "probability": "1"
+                        "probability": ".9"
                     }
                 }
             },
@@ -147,7 +151,7 @@
                     "postsynaptic": "GrCs",
                     "synapse": "GABAA",
                     "delay": 0,
-                    "weight": 45,
+                    "weight": "weight_gol_grc",
                     "random_connectivity": {
                         "probability": "0.33"
                     }

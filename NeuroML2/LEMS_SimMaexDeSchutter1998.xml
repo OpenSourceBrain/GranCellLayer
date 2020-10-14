@@ -16,24 +16,28 @@
     
     <Include file="PyNN.xml"/>
     <Include file="MaexDeSchutter1998.net.nml"/>
-    <Include file="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Granule_98.cell.nml"/>
-    <Include file="/Users/padraig/neuroConstruct/osb/cerebellum/networks/GranCellLayer/NeuroML2/Golgi_98.cell.nml"/>
+    <Include file="Granule_98.cell.nml"/>
+    <Include file="Golgi_98.cell.nml"/>
    
     <Simulation id="SimMaexDeSchutter1998" length="600.0ms" step="0.015ms" target="MaexDeSchutter1998" seed="123">  <!-- Note seed: ensures same random numbers used every run -->
         
         <Display id="Gols_v" title="Plots of Gols_v" timeScale="1ms" xmin="-60.0" xmax="660.0" ymin="-80" ymax="40">
             <Line id="Gols_0_Golgi_98_v" quantity="Gols/0/Golgi_98/v" scale="1mV" color="#d54f33" timeScale="1ms"/>
             <Line id="Gols_1_Golgi_98_v" quantity="Gols/1/Golgi_98/v" scale="1mV" color="#0534e4" timeScale="1ms"/>
+            <Line id="Gols_2_Golgi_98_v" quantity="Gols/2/Golgi_98/v" scale="1mV" color="#98e752" timeScale="1ms"/>
+            <Line id="Gols_3_Golgi_98_v" quantity="Gols/3/Golgi_98/v" scale="1mV" color="#bca074" timeScale="1ms"/>
         </Display>
         
         <Display id="GrCs_v" title="Plots of GrCs_v" timeScale="1ms" xmin="-60.0" xmax="660.0" ymin="-80" ymax="40">
-            <Line id="GrCs_0_Granule_98_v" quantity="GrCs/0/Granule_98/v" scale="1mV" color="#98e752" timeScale="1ms"/>
-            <Line id="GrCs_1_Granule_98_v" quantity="GrCs/1/Granule_98/v" scale="1mV" color="#bca074" timeScale="1ms"/>
+            <Line id="GrCs_0_Granule_98_v" quantity="GrCs/0/Granule_98/v" scale="1mV" color="#632794" timeScale="1ms"/>
+            <Line id="GrCs_1_Granule_98_v" quantity="GrCs/1/Granule_98/v" scale="1mV" color="#8a5d88" timeScale="1ms"/>
         </Display>
         
         <OutputFile id="SimMaexDeSchutter1998_Gols_v_dat" fileName="SimMaexDeSchutter1998.Gols.v.dat">
             <OutputColumn id="Gols_0_Golgi_98_v" quantity="Gols/0/Golgi_98/v"/> 
             <OutputColumn id="Gols_1_Golgi_98_v" quantity="Gols/1/Golgi_98/v"/> 
+            <OutputColumn id="Gols_2_Golgi_98_v" quantity="Gols/2/Golgi_98/v"/> 
+            <OutputColumn id="Gols_3_Golgi_98_v" quantity="Gols/3/Golgi_98/v"/> 
         </OutputFile>
         
         <OutputFile id="SimMaexDeSchutter1998_GrCs_v_dat" fileName="SimMaexDeSchutter1998.GrCs.v.dat">
@@ -54,6 +58,76 @@
             <EventSelection id="2" select="GrCs/2/Granule_98" eventPort="spike"/> 
             <EventSelection id="3" select="GrCs/3/Granule_98" eventPort="spike"/> 
             <EventSelection id="4" select="GrCs/4/Granule_98" eventPort="spike"/> 
+            <EventSelection id="5" select="GrCs/5/Granule_98" eventPort="spike"/> 
+            <EventSelection id="6" select="GrCs/6/Granule_98" eventPort="spike"/> 
+            <EventSelection id="7" select="GrCs/7/Granule_98" eventPort="spike"/> 
+            <EventSelection id="8" select="GrCs/8/Granule_98" eventPort="spike"/> 
+            <EventSelection id="9" select="GrCs/9/Granule_98" eventPort="spike"/> 
+            <EventSelection id="10" select="GrCs/10/Granule_98" eventPort="spike"/> 
+            <EventSelection id="11" select="GrCs/11/Granule_98" eventPort="spike"/> 
+            <EventSelection id="12" select="GrCs/12/Granule_98" eventPort="spike"/> 
+            <EventSelection id="13" select="GrCs/13/Granule_98" eventPort="spike"/> 
+            <EventSelection id="14" select="GrCs/14/Granule_98" eventPort="spike"/> 
+            <EventSelection id="15" select="GrCs/15/Granule_98" eventPort="spike"/> 
+            <EventSelection id="16" select="GrCs/16/Granule_98" eventPort="spike"/> 
+            <EventSelection id="17" select="GrCs/17/Granule_98" eventPort="spike"/> 
+            <EventSelection id="18" select="GrCs/18/Granule_98" eventPort="spike"/> 
+            <EventSelection id="19" select="GrCs/19/Granule_98" eventPort="spike"/> 
+            <EventSelection id="20" select="GrCs/20/Granule_98" eventPort="spike"/> 
+            <EventSelection id="21" select="GrCs/21/Granule_98" eventPort="spike"/> 
+            <EventSelection id="22" select="GrCs/22/Granule_98" eventPort="spike"/> 
+            <EventSelection id="23" select="GrCs/23/Granule_98" eventPort="spike"/> 
+            <EventSelection id="24" select="GrCs/24/Granule_98" eventPort="spike"/> 
+            <EventSelection id="25" select="GrCs/25/Granule_98" eventPort="spike"/> 
+            <EventSelection id="26" select="GrCs/26/Granule_98" eventPort="spike"/> 
+            <EventSelection id="27" select="GrCs/27/Granule_98" eventPort="spike"/> 
+            <EventSelection id="28" select="GrCs/28/Granule_98" eventPort="spike"/> 
+            <EventSelection id="29" select="GrCs/29/Granule_98" eventPort="spike"/> 
+            <EventSelection id="30" select="GrCs/30/Granule_98" eventPort="spike"/> 
+            <EventSelection id="31" select="GrCs/31/Granule_98" eventPort="spike"/> 
+            <EventSelection id="32" select="GrCs/32/Granule_98" eventPort="spike"/> 
+            <EventSelection id="33" select="GrCs/33/Granule_98" eventPort="spike"/> 
+            <EventSelection id="34" select="GrCs/34/Granule_98" eventPort="spike"/> 
+            <EventSelection id="35" select="GrCs/35/Granule_98" eventPort="spike"/> 
+            <EventSelection id="36" select="GrCs/36/Granule_98" eventPort="spike"/> 
+            <EventSelection id="37" select="GrCs/37/Granule_98" eventPort="spike"/> 
+            <EventSelection id="38" select="GrCs/38/Granule_98" eventPort="spike"/> 
+            <EventSelection id="39" select="GrCs/39/Granule_98" eventPort="spike"/> 
+            <EventSelection id="40" select="GrCs/40/Granule_98" eventPort="spike"/> 
+            <EventSelection id="41" select="GrCs/41/Granule_98" eventPort="spike"/> 
+            <EventSelection id="42" select="GrCs/42/Granule_98" eventPort="spike"/> 
+            <EventSelection id="43" select="GrCs/43/Granule_98" eventPort="spike"/> 
+            <EventSelection id="44" select="GrCs/44/Granule_98" eventPort="spike"/> 
+            <EventSelection id="45" select="GrCs/45/Granule_98" eventPort="spike"/> 
+            <EventSelection id="46" select="GrCs/46/Granule_98" eventPort="spike"/> 
+            <EventSelection id="47" select="GrCs/47/Granule_98" eventPort="spike"/> 
+            <EventSelection id="48" select="GrCs/48/Granule_98" eventPort="spike"/> 
+            <EventSelection id="49" select="GrCs/49/Granule_98" eventPort="spike"/> 
+            <EventSelection id="50" select="GrCs/50/Granule_98" eventPort="spike"/> 
+            <EventSelection id="51" select="GrCs/51/Granule_98" eventPort="spike"/> 
+            <EventSelection id="52" select="GrCs/52/Granule_98" eventPort="spike"/> 
+            <EventSelection id="53" select="GrCs/53/Granule_98" eventPort="spike"/> 
+            <EventSelection id="54" select="GrCs/54/Granule_98" eventPort="spike"/> 
+            <EventSelection id="55" select="GrCs/55/Granule_98" eventPort="spike"/> 
+            <EventSelection id="56" select="GrCs/56/Granule_98" eventPort="spike"/> 
+            <EventSelection id="57" select="GrCs/57/Granule_98" eventPort="spike"/> 
+            <EventSelection id="58" select="GrCs/58/Granule_98" eventPort="spike"/> 
+            <EventSelection id="59" select="GrCs/59/Granule_98" eventPort="spike"/> 
+            <EventSelection id="60" select="GrCs/60/Granule_98" eventPort="spike"/> 
+            <EventSelection id="61" select="GrCs/61/Granule_98" eventPort="spike"/> 
+            <EventSelection id="62" select="GrCs/62/Granule_98" eventPort="spike"/> 
+            <EventSelection id="63" select="GrCs/63/Granule_98" eventPort="spike"/> 
+            <EventSelection id="64" select="GrCs/64/Granule_98" eventPort="spike"/> 
+            <EventSelection id="65" select="GrCs/65/Granule_98" eventPort="spike"/> 
+            <EventSelection id="66" select="GrCs/66/Granule_98" eventPort="spike"/> 
+            <EventSelection id="67" select="GrCs/67/Granule_98" eventPort="spike"/> 
+            <EventSelection id="68" select="GrCs/68/Granule_98" eventPort="spike"/> 
+            <EventSelection id="69" select="GrCs/69/Granule_98" eventPort="spike"/> 
+            <EventSelection id="70" select="GrCs/70/Granule_98" eventPort="spike"/> 
+            <EventSelection id="71" select="GrCs/71/Granule_98" eventPort="spike"/> 
+            <EventSelection id="72" select="GrCs/72/Granule_98" eventPort="spike"/> 
+            <EventSelection id="73" select="GrCs/73/Granule_98" eventPort="spike"/> 
+            <EventSelection id="74" select="GrCs/74/Granule_98" eventPort="spike"/> 
         </EventOutputFile>
         
         <EventOutputFile id="SimMaexDeSchutter1998_MFs_spikes" fileName="SimMaexDeSchutter1998.MFs.spikes" format="ID_TIME">
