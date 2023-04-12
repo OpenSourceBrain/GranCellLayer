@@ -37,3 +37,5 @@ Net_5*.nml
 *_netpyne.py
 *.gv*
 /NeuroML2/MaexDeSchutter1998.net.png
+arm64
+/NeuroML2/simulator.props
